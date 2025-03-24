@@ -122,7 +122,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4308418048'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4342758912'>]</summary>
 
 
   ```python
@@ -162,7 +162,7 @@ sometimes we may need to know what was the handler we set above
 
 ### *method*:  get\_style()
 
-<details><summary>[self, name=None) -> dic]</summary>
+<details><summary>[self, name=None] ->  dict</summary>
 
 
   ```python
@@ -207,7 +207,7 @@ removing widget from its parent
 
 ### *method*:  set\_event\_handler()
 
-<details><summary>[self, event_name: str, handler) -> Non]</summary>
+<details><summary>[self, event_name: str, handler] ->  None</summary>
 
 
   ```python

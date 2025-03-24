@@ -167,7 +167,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4355867040'>]</summary>
 
 
   ```python
@@ -377,7 +377,7 @@ def el_from_template(template:dict=None)->'Element':
 </details>
 
 
-non-publick fn for making elements from template like:
+making elements from template like:
 
 ```json
 

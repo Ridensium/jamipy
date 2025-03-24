@@ -1,5 +1,5 @@
 """
-publick class for Link (hyperlink) widget
+module for Link (hyperlink) widget class
 Label based, with more styling by default and url keyword as well
 """
 

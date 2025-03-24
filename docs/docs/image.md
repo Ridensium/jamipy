@@ -1,6 +1,6 @@
 ## image
 
-publick class for Image widget
+module for the Image widget class
 
 ## *class*:  Image()
 
@@ -61,7 +61,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4355867040'>]</summary>
 
 
   ```python

@@ -12,7 +12,7 @@ create_el = document.createElement
 
 def el_from_template(template:dict=None)->'Element':
     """
-    non-publick fn for making elements from template like:
+    making elements from template like:
 
     ```json
 

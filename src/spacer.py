@@ -1,5 +1,5 @@
 """
-class for Spacer widget which
+module for the Spacer widget class, which
 extends the space betheen widgets in containers
 """
 

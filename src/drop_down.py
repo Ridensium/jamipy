@@ -1,12 +1,12 @@
 """
-publick class for DropDown widget
+module with classes for the DropDown widget
 """
 from .component import Component, Element, Events, el_from_template
 from .container import Container
 
 
 class DropDownOption(Component):
-    """non-publick class for the drop down option widget"""
+    """class for the drop down option widget"""
     _el:Element = el_from_template({'tag_name':  'option','roles':'dropdown-option'})
 
     def __init__(self, value=None, key=''):
@@ -19,7 +19,7 @@ class DropDownOption(Component):
         self.key = key
 
 class DropDown(Container):
-    """publick class for the drop down widget"""
+    """class for the drop down widget"""
     _el:Element = el_from_template({'tag_name':  'select','roles':'dropdown'})
 
     _items:dict = {}

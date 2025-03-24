@@ -1,5 +1,5 @@
 """
-publick class for option widgets RadioButton, RadioGroup and CheckBox
+module for option widgets RadioButton, RadioGroup and CheckBox
 """
 
 from .label import Label, IconAlign
@@ -7,7 +7,7 @@ from .container import Container, Element, el_from_template
 
 class Checker(Label):
     """
-    non publick class constructor for the RadioButton and CheckBox
+    class constructor for the RadioButton and CheckBox
     based on the Label
     """
 

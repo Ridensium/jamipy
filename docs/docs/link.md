@@ -1,6 +1,6 @@
 ## link
 
-publick class for Link (hyperlink) widget
+module for Link (hyperlink) widget class
 Label based, with more styling by default and url keyword as well
 
 ## *class*:  Link()
@@ -61,7 +61,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4355867040'>]</summary>
 
 
   ```python

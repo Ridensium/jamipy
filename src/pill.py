@@ -1,5 +1,5 @@
 """
-publick class for Pill widget
+module for the Pill widget class
 Label based, with more styling by default
 """
 

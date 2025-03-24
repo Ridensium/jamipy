@@ -65,7 +65,7 @@ class Container(Component):
 </details>
 
 
-public class for all container like widgets as well making generic one
+class for all container like widgets as well making generic one
 adding methods to the *class* **Component** to do so
 by defaul the orientation of widgets inside it is column
 the widgets based on it in jamipy will have different orientations
@@ -199,7 +199,7 @@ removes all children
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4355867040'>]</summary>
 
 
   ```python

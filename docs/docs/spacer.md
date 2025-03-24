@@ -1,6 +1,6 @@
 ## spacer
 
-class for Spacer widget which
+module for the Spacer widget class, which
 extends the space betheen widgets in containers
 
 ## *class*:  Spacer()
@@ -50,7 +50,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4355867040'>]</summary>
 
 
   ```python

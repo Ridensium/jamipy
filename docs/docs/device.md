@@ -1,6 +1,6 @@
 ## device
 
-non-publick module for providing usefull information about the device like is it touch or offline etc.
+module for providing usefull information about the device like is it touch or offline etc.
 some widgets will may need such info to chanche stylin or to be mobile friendly
 all that data is avaivable in the class `Device` as well as css classes aded to the body for constants and `data-*` attributes for dynamic values.
 
@@ -28,7 +28,7 @@ class Device:
 </details>
 
 
-publick class for providing the device info to the widgets if needed
+class for providing the device info to the widgets if needed
 TOUCH - True if device is with touch screen
 D_WIDTH - device screen width
 D_HEIGTH - device screen width

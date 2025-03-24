@@ -1,6 +1,6 @@
 ## drop_down
 
-publick class for DropDown widget
+module with classes for the DropDown widget
 
 ## *class*:  DropDown()
 
@@ -49,7 +49,7 @@ class DropDown(Container):
 </details>
 
 
-publick class for the drop down widget
+class for the drop down widget
 
 
 ### *method*:  \_\_iadd\_\_()
@@ -213,7 +213,7 @@ removes all children
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4355867040'>]</summary>
 
 
   ```python
@@ -442,7 +442,7 @@ class DropDownOption(Component):
 </details>
 
 
-non-publick class for the drop down option widget
+class for the drop down option widget
 
 
 ### *method*:  \_\_init\_\_()
@@ -472,7 +472,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4355867040'>]</summary>
 
 
   ```python

@@ -1,6 +1,6 @@
 ## checkers
 
-publick class for option widgets RadioButton, RadioGroup and CheckBox
+module for option widgets RadioButton, RadioGroup and CheckBox
 
 ## *class*:  CheckBox()
 
@@ -85,7 +85,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4355867040'>]</summary>
 
 
   ```python
@@ -361,7 +361,7 @@ class Checker(Label):
 </details>
 
 
-non publick class constructor for the RadioButton and CheckBox
+class constructor for the RadioButton and CheckBox
 based on the Label
 
 
@@ -414,7 +414,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4355867040'>]</summary>
 
 
   ```python
@@ -740,7 +740,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4355867040'>]</summary>
 
 
   ```python
@@ -1170,7 +1170,7 @@ removes all children
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4355867040'>]</summary>
 
 
   ```python

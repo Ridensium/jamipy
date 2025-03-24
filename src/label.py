@@ -1,5 +1,5 @@
 """
-publick module for Label widget
+module for Label widget
 by default uses for the icons googles material-symbols-rounded
 with <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />    
 in the html.head

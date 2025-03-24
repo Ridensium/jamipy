@@ -8,7 +8,7 @@ from .component import Component, Element, el_from_template, create_el
 
 class Container(Component):
     """
-    public class for all container like widgets as well making generic one
+    class for all container like widgets as well making generic one
     adding methods to the *class* **Component** to do so
     by defaul the orientation of widgets inside it is column
     the widgets based on it in jamipy will have different orientations

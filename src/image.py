@@ -1,5 +1,5 @@
 """
-publick class for Image widget
+module for the Image widget class
 """
 
 from .component import Component, Element, el_from_template

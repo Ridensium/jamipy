@@ -162,7 +162,7 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  display(self, parent_el=<MagicMock name='mock.document.body' id='4393402784'>)
+#### *method*:  display(self, parent_el=<MagicMock name='mock.document.body' id='4321706400'>)
 > appends the widget to html element in `parent_el`,
 > which default value is the webpage body
 <details><summary><sub>expand source</sub></summary>
@@ -243,8 +243,8 @@ class DropDown(Container):
 > ```python
 
 > def fn(event=None)
-> # def fn(self, event=None)
-> # def fn(*args)
+> def fn(self, event=None)
+> def fn(*args)
 
 > widget.set_event_handler('click', fn)
 
@@ -362,7 +362,7 @@ class DropDownOption(Component):
 
 </details>
 
-#### *method*:  display(self, parent_el=<MagicMock name='mock.document.body' id='4393402784'>)
+#### *method*:  display(self, parent_el=<MagicMock name='mock.document.body' id='4321706400'>)
 > appends the widget to html element in `parent_el`,
 > which default value is the webpage body
 <details><summary><sub>expand source</sub></summary>
@@ -430,8 +430,8 @@ class DropDownOption(Component):
 > ```python
 
 > def fn(event=None)
-> # def fn(self, event=None)
-> # def fn(*args)
+> def fn(self, event=None)
+> def fn(*args)
 
 > widget.set_event_handler('click', fn)
 

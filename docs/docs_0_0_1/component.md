@@ -152,7 +152,7 @@ class Component:
 
 </details>
 
-#### *method*:  display(self, parent_el=<MagicMock name='mock.document.body' id='4393402784'>)
+#### *method*:  display(self, parent_el=<MagicMock name='mock.document.body' id='4321706400'>)
 > appends the widget to html element in `parent_el`,
 > which default value is the webpage body
 <details><summary><sub>expand source</sub></summary>
@@ -220,8 +220,8 @@ class Component:
 > ```python
 
 > def fn(event=None)
-> # def fn(self, event=None)
-> # def fn(*args)
+> def fn(self, event=None)
+> def fn(*args)
 
 > widget.set_event_handler('click', fn)
 
@@ -299,17 +299,21 @@ class Component:
 
 
 
-## *function*:  el\_from\_template(template: dict = None) -> <MagicMock name='mock.Element' id='4393408832'>
+## *function*:  el\_from\_template(template: dict = None) -> <MagicMock name='mock.Element' id='4321712448'>
 > non-publick fn for making elements from template like:
 
 > ```json
+
 > {
 > 'tag_name':  'div',
 > 'roles':'label',
 > 'children': []
 > }
+
 > ```
+
 > useful for widgets with compund html to make copie from template instead making and nesting new one
+> 
 <details><summary><sub>expand source</sub></summary>
 
   ```python

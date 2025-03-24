@@ -14,14 +14,17 @@ def el_from_template(template:dict=None)->Element:
     """
     non-publick fn for making elements from template like:
 
-    ```json
-    {
-    'tag_name':  'div',
-    'roles':'label',
-    'children': []
-    }
-    ```
-    useful for widgets with compund html to make copie from template instead making and nesting new one
+```json
+
+{
+'tag_name':  'div',
+'roles':'label',
+'children': []
+}
+
+```
+
+useful for widgets with compund html to make copie from template instead making and nesting new one
     """
 
     el:Element = create_el(template['tag_name'])
@@ -75,11 +78,11 @@ class Component:
 
 ```python
 
-        def fn(event=None)
-        # def fn(self, event=None)
-        # def fn(*args)
+def fn(event=None)
+def fn(self, event=None)
+def fn(*args)
 
-        widget.set_event_handler('click', fn)
+widget.set_event_handler('click', fn)
 
 ```
         """

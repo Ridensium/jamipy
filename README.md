@@ -35,7 +35,7 @@ Apart of the source files in `/src` directory there are minified versions in `/d
 ```python
 from jamipy import Label, Container
 
-label = Label('Hello World', 'home')
+label = Label('Hello World')
 
 label.display()
 

@@ -35,13 +35,13 @@ Apart of the source files in `/src` directory there are minified versions in `/d
 ```python
 from jamipy import Label, Container
 
-label = Label(text='Hello World', icon='home')
+label = Label('Hello World', 'home')
 
 label.display()
 
 container = Container()
 
-label_2 = Label('Hello World', 'sunny')
+label_2 = Label(text='Hello World', icon='sunny')
 
 container += label_2
 

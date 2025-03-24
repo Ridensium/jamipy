@@ -5,7 +5,7 @@ they are only to help of autosugestion typing
 
 ## *class*:  Align()
 
-<details><summary>Align()</summary>
+<details><summary>[]</summary>
 
   ```python
 class Align: 
@@ -23,7 +23,7 @@ class Align:
 
 ## *class*:  Events()
 
-<details><summary>Events()</summary>
+<details><summary>[]</summary>
 
   ```python
 class Events:
@@ -39,7 +39,7 @@ class Events:
 
 ## *class*:  IconAlign()
 
-<details><summary>IconAlign()</summary>
+<details><summary>[]</summary>
 
   ```python
 class IconAlign:
@@ -58,7 +58,7 @@ class IconAlign:
 
 ## *class*:  Justify()
 
-<details><summary>Justify()</summary>
+<details><summary>[]</summary>
 
   ```python
 class Justify:

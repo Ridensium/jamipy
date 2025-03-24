@@ -5,7 +5,7 @@ all that data is avaivable in the class `Device` as well as css classes aded to 
 
 ## *class*:  Device()
 
-<details><summary>Device()</summary>
+<details><summary>[]</summary>
 
   ```python
 class Device:
@@ -38,7 +38,7 @@ PIXELS - pixel ratio of the screen
 
 ## *function*:  device\_size()
 
-<details><summary>device_size()</summary>
+<details><summary>[]</summary>
 
   ```python
 def device_size():
@@ -75,7 +75,7 @@ tall, tall-2 - usefull for distinguish smartphones
 
 ## *function*:  network()
 
-<details><summary>network(event=None, *args, **kwargs)</summary>
+<details><summary>[event=None, *args, **kwargs]</summary>
 
   ```python
 def network(event=None, *args, **kwargs):
@@ -93,7 +93,7 @@ runs on network status cnanges and update current status
 
 ## *function*:  resize()
 
-<details><summary>resize(event=None, *args, **kwargs)</summary>
+<details><summary>[event=None, *args, **kwargs]</summary>
 
   ```python
 def resize(event=None, *args, **kwargs):
@@ -116,7 +116,7 @@ runs on window resize and update current size and orientation data
 
 ## *function*:  touch()
 
-<details><summary>touch()</summary>
+<details><summary>[]</summary>
 
   ```python
 def touch():

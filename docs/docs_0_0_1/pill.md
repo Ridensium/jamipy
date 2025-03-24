@@ -4,7 +4,7 @@ Label based, with more styling by default
 
 ## *class*:  Pill()
 
-<details><summary>Pill(text='', icon=None, icon_align='', roles=None)</summary>
+<details><summary>[text='', icon=None, icon_align='', roles=None]</summary>
 
   ```python
 class Pill(Label):
@@ -37,9 +37,9 @@ class Pill(Label):
 basic Label widget with text and icon
 it has text and icon, and ways to change the icon position
 
-#### *method*:  \_\_init\_\_()
+### *method*:  \_\_init\_\_()
 
-<details><summary>__init__(self, text='', icon=None, icon_align='', roles=None)</summary>
+<details><summary>[self, text='', icon=None, icon_align='', roles=None]</summary>
 
   ```python
     def __init__(self, text = '', icon = None, icon_align = IconAlign.NONE, roles = None):
@@ -52,9 +52,9 @@ it has text and icon, and ways to change the icon position
 makes widget with element by default div
 if provided roles adds them
 
-#### *method*:  display()
+### *method*:  display()
 
-<details><summary>display(self, parent_el=<MagicMock name='mock.document.body' id='4384243200'>)</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4349001216'>]</summary>
 
   ```python
     def display(self, parent_el=document.body):
@@ -69,9 +69,9 @@ if provided roles adds them
 appends the widget to html element in `parent_el`,
 which default value is the webpage body
 
-#### *method*:  get\_event\_handler()
+### *method*:  get\_event\_handler()
 
-<details><summary>get_event_handler(self, event_name)</summary>
+<details><summary>[self, event_name]</summary>
 
   ```python
     def get_event_handler(self, event_name):
@@ -84,9 +84,9 @@ which default value is the webpage body
 
 sometimes we may need to know what was the handler we set above
 
-#### *method*:  get\_style()
+### *method*:  get\_style()
 
-<details><summary>get_style(self, name=None) -> dict</summary>
+<details><summary>[self, name=None) -> dic]</summary>
 
   ```python
     def get_style(self, name=None)->dict:
@@ -106,9 +106,9 @@ sometimes we may need to know what was the handler we set above
 
 gets all if `name=None` or specific inline style/styles
 
-#### *method*:  remove()
+### *method*:  remove()
 
-<details><summary>remove(self)</summary>
+<details><summary>[self]</summary>
 
   ```python
     def remove(self):
@@ -121,9 +121,9 @@ gets all if `name=None` or specific inline style/styles
 
 removing widget from its parent
 
-#### *method*:  set\_event\_handler()
+### *method*:  set\_event\_handler()
 
-<details><summary>set_event_handler(self, event_name: str, handler) -> None</summary>
+<details><summary>[self, event_name: str, handler) -> Non]</summary>
 
   ```python
     def set_event_handler(self, event_name:str, handler)->None:
@@ -148,9 +148,9 @@ widget.set_event_handler('click', fn)
 ```
         
 
-#### *method*:  set\_parent()
+### *method*:  set\_parent()
 
-<details><summary>set_parent(self, parent: 'Component', at_begining=False)</summary>
+<details><summary>[self, parent: 'Component', at_begining=False]</summary>
 
   ```python
     def set_parent(self, parent:'Component', at_begining=False):
@@ -166,9 +166,9 @@ widget.set_event_handler('click', fn)
 
 adding widget to parent one
 
-#### *method*:  style()
+### *method*:  style()
 
-<details><summary>style(self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs)</summary>
+<details><summary>[self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs]</summary>
 
   ```python
     def style(self, border:str=None, text_align:str=None, tooltip:str=None, font:str=None, font_size:str|int=None, font_weight:int=None, color:str=None, background:str=None, bold:bool=None, width:str|int=None, height:str|int=None, italic:bool=None, **kwargs):

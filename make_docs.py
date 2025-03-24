@@ -17,9 +17,9 @@ DOCS = './docs/dev_docs'
 EXCLUDE = ['pyscript', 'js', 'window', 'navigator', 'document']
 
 # template for all objects
-OBJECT_TEMPLATE = """{heading} *{type}*:  {name_heading}()
+OBJECT_TEMPLATE = """{heading} *{type}*:  {name}()
 
-<details><summary>{name}{signature}</summary>
+<details><summary>{signature}</summary>
 
   ```python
 {source}
@@ -114,7 +114,7 @@ class Package:
 
 class Object:
     """super class for all objects"""
-    heading:int = 4
+    heading:int = 3
     template = OBJECT_TEMPLATE
     def __init__(self, name, obj, type='object'):
         doc = inspect.getdoc(obj)
@@ -127,9 +127,8 @@ class Object:
         self.doc = self.template.format(
             heading = '#'*self.heading,
             type=type,
-            name=name,
-            name_heading = name.replace('_', '\_'),
-            signature=signature,
+            name=name.replace('_', '\_'), #bec md
+            signature=f'[{str(signature)[1:-1]}]',
             info=parsed_doc,
             source=parse_source(source))  
 

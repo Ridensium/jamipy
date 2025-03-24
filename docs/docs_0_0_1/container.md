@@ -4,7 +4,7 @@ can be used as well to build custom widgets
 
 ## *class*:  Container()
 
-<details><summary>Container(children: list[src.component.Component] = None, *args, **kwargs)</summary>
+<details><summary>[children: list[src.component.Component] = None, *args, **kwargs]</summary>
 
   ```python
 class Container(Component):
@@ -67,9 +67,9 @@ by defaul the orientation of widgets inside it is column
 the widgets based on it in jamipy will have different orientations
 and if you make custom one, can apply different roles or styles to change it
 
-#### *method*:  \_\_iadd\_\_()
+### *method*:  \_\_iadd\_\_()
 
-<details><summary>__iadd__(self, component: src.component.Component)</summary>
+<details><summary>[self, component: src.component.Component]</summary>
 
   ```python
     def __iadd__(self, component:Component):
@@ -85,9 +85,9 @@ augmented adding of children widgets
 will apend the child widget at end
 `parent += child`
 
-#### *method*:  \_\_init\_\_()
+### *method*:  \_\_init\_\_()
 
-<details><summary>__init__(self, children: list[src.component.Component] = None, *args, **kwargs)</summary>
+<details><summary>[self, children: list[src.component.Component] = None, *args, **kwargs]</summary>
 
   ```python
     def __init__(self, children:list[Component]=None, *args, **kwargs):
@@ -105,9 +105,9 @@ will apend the child widget at end
 
 will add children widgets provided by the `children:list`
 
-#### *method*:  \_\_isub\_\_()
+### *method*:  \_\_isub\_\_()
 
-<details><summary>__isub__(self, component: src.component.Component)</summary>
+<details><summary>[self, component: src.component.Component]</summary>
 
   ```python
     def __isub__(self, component:Component):
@@ -122,9 +122,9 @@ will add children widgets provided by the `children:list`
 augmented removal of children widgets
 `parent -= child`
 
-#### *method*:  add\_child()
+### *method*:  add\_child()
 
-<details><summary>add_child(self, component: src.component.Component)</summary>
+<details><summary>[self, component: src.component.Component]</summary>
 
   ```python
     def add_child(self, component:Component):
@@ -137,9 +137,9 @@ augmented removal of children widgets
 
 adsing widget child at end
 
-#### *method*:  add\_child\_as\_first()
+### *method*:  add\_child\_as\_first()
 
-<details><summary>add_child_as_first(self, component: src.component.Component)</summary>
+<details><summary>[self, component: src.component.Component]</summary>
 
   ```python
     def add_child_as_first(self, component:Component):
@@ -153,9 +153,9 @@ adsing widget child at end
 adsing widget child at begining
 for speed esp when lots of children is in separate method to prevent `if`
 
-#### *method*:  clear()
+### *method*:  clear()
 
-<details><summary>clear(self)</summary>
+<details><summary>[self]</summary>
 
   ```python
     def clear(self):
@@ -168,9 +168,9 @@ for speed esp when lots of children is in separate method to prevent `if`
 
 removes all children
 
-#### *method*:  display()
+### *method*:  display()
 
-<details><summary>display(self, parent_el=<MagicMock name='mock.document.body' id='4384243200'>)</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4349001216'>]</summary>
 
   ```python
     def display(self, parent_el=document.body):
@@ -185,9 +185,9 @@ removes all children
 appends the widget to html element in `parent_el`,
 which default value is the webpage body
 
-#### *method*:  get\_event\_handler()
+### *method*:  get\_event\_handler()
 
-<details><summary>get_event_handler(self, event_name)</summary>
+<details><summary>[self, event_name]</summary>
 
   ```python
     def get_event_handler(self, event_name):
@@ -200,9 +200,9 @@ which default value is the webpage body
 
 sometimes we may need to know what was the handler we set above
 
-#### *method*:  get\_style()
+### *method*:  get\_style()
 
-<details><summary>get_style(self, name=None) -> dict</summary>
+<details><summary>[self, name=None) -> dic]</summary>
 
   ```python
     def get_style(self, name=None)->dict:
@@ -222,9 +222,9 @@ sometimes we may need to know what was the handler we set above
 
 gets all if `name=None` or specific inline style/styles
 
-#### *method*:  remove()
+### *method*:  remove()
 
-<details><summary>remove(self)</summary>
+<details><summary>[self]</summary>
 
   ```python
     def remove(self):
@@ -237,9 +237,9 @@ gets all if `name=None` or specific inline style/styles
 
 removing widget from its parent
 
-#### *method*:  remove\_child()
+### *method*:  remove\_child()
 
-<details><summary>remove_child(self, component: src.component.Component)</summary>
+<details><summary>[self, component: src.component.Component]</summary>
 
   ```python
     def remove_child(self, component:Component):
@@ -252,9 +252,9 @@ removing widget from its parent
 
 removes child widget from itself
 
-#### *method*:  set\_event\_handler()
+### *method*:  set\_event\_handler()
 
-<details><summary>set_event_handler(self, event_name: str, handler) -> None</summary>
+<details><summary>[self, event_name: str, handler) -> Non]</summary>
 
   ```python
     def set_event_handler(self, event_name:str, handler)->None:
@@ -279,9 +279,9 @@ widget.set_event_handler('click', fn)
 ```
         
 
-#### *method*:  set\_parent()
+### *method*:  set\_parent()
 
-<details><summary>set_parent(self, parent: 'Component', at_begining=False)</summary>
+<details><summary>[self, parent: 'Component', at_begining=False]</summary>
 
   ```python
     def set_parent(self, parent:'Component', at_begining=False):
@@ -297,9 +297,9 @@ widget.set_event_handler('click', fn)
 
 adding widget to parent one
 
-#### *method*:  style()
+### *method*:  style()
 
-<details><summary>style(self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs)</summary>
+<details><summary>[self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs]</summary>
 
   ```python
     def style(self, border:str=None, text_align:str=None, tooltip:str=None, font:str=None, font_size:str|int=None, font_weight:int=None, color:str=None, background:str=None, bold:bool=None, width:str|int=None, height:str|int=None, italic:bool=None, **kwargs):

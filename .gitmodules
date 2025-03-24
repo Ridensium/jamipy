@@ -1,0 +1,3 @@
+[submodule "/Users/poli/Documents/GitHub/jamipy/external/pyscript"]
+	path = /Users/poli/Documents/GitHub/jamipy/external/pyscript
+	url = https://github.com/pyscript/pyscript.git

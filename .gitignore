@@ -1,3 +1,10 @@
-assets/.DS_Store
+_ARCHIVE
 .DS_Store
-/tests
+dist/dev**
+docs/dev**
+.obsidian
+external/pyscript
+__pycache__
+tests/wrangler/assets/**.png
+tests/wrangler/node_modules
+tests/wrangler/**

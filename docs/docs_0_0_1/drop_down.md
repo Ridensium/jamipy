@@ -1,9 +1,11 @@
 ## drop_down
+
 publick class for DropDown widget
 
 ## *class*:  DropDown()
 
 <details><summary>[items: list | dict = None, selected_value=None, include_placeholder: bool = True, placeholder='', enabled=True]</summary>
+
 
   ```python
 class DropDown(Container):
@@ -43,13 +45,17 @@ class DropDown(Container):
 
   ```
 
+
 </details>
 
+
 publick class for the drop down widget
+
 
 ### *method*:  \_\_iadd\_\_()
 
 <details><summary>[self, component: src.component.Component]</summary>
+
 
   ```python
     def __iadd__(self, component:Component):
@@ -59,15 +65,19 @@ publick class for the drop down widget
 
   ```
 
+
 </details>
+
 
 augmented adding of children widgets
 will apend the child widget at end
 `parent += child`
 
+
 ### *method*:  \_\_init\_\_()
 
 <details><summary>[self, items: list | dict = None, selected_value=None, include_placeholder: bool = True, placeholder='', enabled=True]</summary>
+
 
   ```python
     def __init__(self, items:list|dict=None, selected_value=None, include_placeholder:bool=True, placeholder='', enabled=True):
@@ -93,13 +103,17 @@ will apend the child widget at end
 
   ```
 
+
 </details>
 
+
 will add children widgets provided by the `children:list`
+
 
 ### *method*:  \_\_isub\_\_()
 
 <details><summary>[self, component: src.component.Component]</summary>
+
 
   ```python
     def __isub__(self, component:Component):
@@ -109,14 +123,18 @@ will add children widgets provided by the `children:list`
 
   ```
 
+
 </details>
+
 
 augmented removal of children widgets
 `parent -= child`
 
+
 ### *method*:  add\_child()
 
 <details><summary>[self, component: src.component.Component]</summary>
+
 
   ```python
     def add_child(self, component:Component):
@@ -125,13 +143,17 @@ augmented removal of children widgets
 
   ```
 
+
 </details>
 
+
 adsing widget child at end
+
 
 ### *method*:  add\_child\_as\_first()
 
 <details><summary>[self, component: src.component.Component]</summary>
+
 
   ```python
     def add_child_as_first(self, component:Component):
@@ -140,14 +162,18 @@ adsing widget child at end
 
   ```
 
+
 </details>
+
 
 adsing widget child at begining
 for speed esp when lots of children is in separate method to prevent `if`
 
+
 ### *method*:  change()
 
 <details><summary>[self, event]</summary>
+
 
   ```python
     def change(self, event):
@@ -159,13 +185,17 @@ for speed esp when lots of children is in separate method to prevent `if`
 
   ```
 
+
 </details>
+
+
 
 
 
 ### *method*:  clear()
 
 <details><summary>[self]</summary>
+
 
   ```python
     def clear(self):
@@ -174,13 +204,17 @@ for speed esp when lots of children is in separate method to prevent `if`
 
   ```
 
+
 </details>
+
 
 removes all children
 
+
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4349001216'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4308418048'>]</summary>
+
 
   ```python
     def display(self, parent_el=document.body):
@@ -190,14 +224,18 @@ removes all children
 
   ```
 
+
 </details>
+
 
 appends the widget to html element in `parent_el`,
 which default value is the webpage body
 
+
 ### *method*:  get\_event\_handler()
 
 <details><summary>[self, event_name]</summary>
+
 
   ```python
     def get_event_handler(self, event_name):
@@ -206,13 +244,17 @@ which default value is the webpage body
 
   ```
 
+
 </details>
 
+
 sometimes we may need to know what was the handler we set above
+
 
 ### *method*:  get\_style()
 
 <details><summary>[self, name=None) -> dic]</summary>
+
 
   ```python
     def get_style(self, name=None)->dict:
@@ -228,13 +270,17 @@ sometimes we may need to know what was the handler we set above
 
   ```
 
+
 </details>
 
+
 gets all if `name=None` or specific inline style/styles
+
 
 ### *method*:  remove()
 
 <details><summary>[self]</summary>
+
 
   ```python
     def remove(self):
@@ -243,13 +289,17 @@ gets all if `name=None` or specific inline style/styles
 
   ```
 
+
 </details>
 
+
 removing widget from its parent
+
 
 ### *method*:  remove\_child()
 
 <details><summary>[self, component: src.component.Component]</summary>
+
 
   ```python
     def remove_child(self, component:Component):
@@ -258,13 +308,17 @@ removing widget from its parent
 
   ```
 
+
 </details>
 
+
 removes child widget from itself
+
 
 ### *method*:  set\_event\_handler()
 
 <details><summary>[self, event_name: str, handler) -> Non]</summary>
+
 
   ```python
     def set_event_handler(self, event_name:str, handler)->None:
@@ -273,10 +327,12 @@ removes child widget from itself
 
   ```
 
+
 </details>
 
-        ading event handler for the widget, the handler will receive as first argument the event object
-        example:
+
+ading event handler for the widget, the handler will receive as first argument the event object
+example:
 
 ```python
 
@@ -287,11 +343,12 @@ def fn(*args)
 widget.set_event_handler('click', fn)
 
 ```
-        
+
 
 ### *method*:  set\_parent()
 
 <details><summary>[self, parent: 'Component', at_begining=False]</summary>
+
 
   ```python
     def set_parent(self, parent:'Component', at_begining=False):
@@ -303,13 +360,17 @@ widget.set_event_handler('click', fn)
 
   ```
 
+
 </details>
 
+
 adding widget to parent one
+
 
 ### *method*:  style()
 
 <details><summary>[self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs]</summary>
+
 
   ```python
     def style(self, border:str=None, text_align:str=None, tooltip:str=None, font:str=None, font_size:str|int=None, font_weight:int=None, color:str=None, background:str=None, bold:bool=None, width:str|int=None, height:str|int=None, italic:bool=None, **kwargs):
@@ -340,7 +401,9 @@ adding widget to parent one
 
   ```
 
+
 </details>
+
 
 its recommended to use classes for styling html instead inline css
 but with this method you can add inline styles to the widget
@@ -353,9 +416,11 @@ keep in mind the in jamipy you have better ways for styling with role/roles and 
 it adds the styles doesnt clean all old ones
 
 
+
 ## *class*:  DropDownOption()
 
 <details><summary>[value=None, key='']</summary>
+
 
   ```python
 class DropDownOption(Component):
@@ -373,13 +438,17 @@ class DropDownOption(Component):
 
   ```
 
+
 </details>
 
+
 non-publick class for the drop down option widget
+
 
 ### *method*:  \_\_init\_\_()
 
 <details><summary>[self, value=None, key='']</summary>
+
 
   ```python
     def __init__(self, value=None, key=''):
@@ -393,14 +462,18 @@ non-publick class for the drop down option widget
 
   ```
 
+
 </details>
+
 
 makes widget with element by default div
 if provided roles adds them
 
+
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4349001216'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4308418048'>]</summary>
+
 
   ```python
     def display(self, parent_el=document.body):
@@ -410,14 +483,18 @@ if provided roles adds them
 
   ```
 
+
 </details>
+
 
 appends the widget to html element in `parent_el`,
 which default value is the webpage body
 
+
 ### *method*:  get\_event\_handler()
 
 <details><summary>[self, event_name]</summary>
+
 
   ```python
     def get_event_handler(self, event_name):
@@ -426,13 +503,17 @@ which default value is the webpage body
 
   ```
 
+
 </details>
 
+
 sometimes we may need to know what was the handler we set above
+
 
 ### *method*:  get\_style()
 
 <details><summary>[self, name=None) -> dic]</summary>
+
 
   ```python
     def get_style(self, name=None)->dict:
@@ -448,13 +529,17 @@ sometimes we may need to know what was the handler we set above
 
   ```
 
+
 </details>
 
+
 gets all if `name=None` or specific inline style/styles
+
 
 ### *method*:  remove()
 
 <details><summary>[self]</summary>
+
 
   ```python
     def remove(self):
@@ -463,13 +548,17 @@ gets all if `name=None` or specific inline style/styles
 
   ```
 
+
 </details>
 
+
 removing widget from its parent
+
 
 ### *method*:  set\_event\_handler()
 
 <details><summary>[self, event_name: str, handler) -> Non]</summary>
+
 
   ```python
     def set_event_handler(self, event_name:str, handler)->None:
@@ -478,10 +567,12 @@ removing widget from its parent
 
   ```
 
+
 </details>
 
-        ading event handler for the widget, the handler will receive as first argument the event object
-        example:
+
+ading event handler for the widget, the handler will receive as first argument the event object
+example:
 
 ```python
 
@@ -492,11 +583,12 @@ def fn(*args)
 widget.set_event_handler('click', fn)
 
 ```
-        
+
 
 ### *method*:  set\_parent()
 
 <details><summary>[self, parent: 'Component', at_begining=False]</summary>
+
 
   ```python
     def set_parent(self, parent:'Component', at_begining=False):
@@ -508,13 +600,17 @@ widget.set_event_handler('click', fn)
 
   ```
 
+
 </details>
 
+
 adding widget to parent one
+
 
 ### *method*:  style()
 
 <details><summary>[self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs]</summary>
+
 
   ```python
     def style(self, border:str=None, text_align:str=None, tooltip:str=None, font:str=None, font_size:str|int=None, font_weight:int=None, color:str=None, background:str=None, bold:bool=None, width:str|int=None, height:str|int=None, italic:bool=None, **kwargs):
@@ -545,7 +641,9 @@ adding widget to parent one
 
   ```
 
+
 </details>
+
 
 its recommended to use classes for styling html instead inline css
 but with this method you can add inline styles to the widget
@@ -556,6 +654,8 @@ values if should be provided in css example:
 `border`, `font_size`, `width` and `height` if given as `int` will be parsed as pixels
 keep in mind the in jamipy you have better ways for styling with role/roles and custom/dynamic css stylesheets
 it adds the styles doesnt clean all old ones
+
+
 
 
 

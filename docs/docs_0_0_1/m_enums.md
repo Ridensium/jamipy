@@ -1,4 +1,5 @@
 ## m_enums
+
 enum like data classes
 micropython hasn't enum
 they are only to help of autosugestion typing
@@ -6,6 +7,7 @@ they are only to help of autosugestion typing
 ## *class*:  Align()
 
 <details><summary>[]</summary>
+
 
   ```python
 class Align: 
@@ -16,7 +18,10 @@ class Align:
 
   ```
 
+
 </details>
+
+
 
 
 
@@ -25,6 +30,7 @@ class Align:
 
 <details><summary>[]</summary>
 
+
   ```python
 class Events:
     
@@ -32,7 +38,10 @@ class Events:
 
   ```
 
+
 </details>
+
+
 
 
 
@@ -40,6 +49,7 @@ class Events:
 ## *class*:  IconAlign()
 
 <details><summary>[]</summary>
+
 
   ```python
 class IconAlign:
@@ -51,7 +61,10 @@ class IconAlign:
 
   ```
 
+
 </details>
+
+
 
 
 
@@ -59,6 +72,7 @@ class IconAlign:
 ## *class*:  Justify()
 
 <details><summary>[]</summary>
+
 
   ```python
 class Justify:
@@ -74,7 +88,11 @@ class Justify:
 
   ```
 
+
 </details>
+
+
+
 
 
 

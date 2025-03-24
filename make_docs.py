@@ -21,28 +21,35 @@ OBJECT_TEMPLATE = """{heading} *{type}*:  {name}()
 
 <details><summary>{signature}</summary>
 
+
   ```python
 {source}
   ```
 
+
 </details>
 
+
 {info}
+
 
 """
 
 # template for modules
 MODULE_TEMPLATE = """## {name}
+
 {info}
 
 {classes}
 
 {functions}
+
 """
 
 
 # template for the package index
 PACKAGE_TEMPLATE = """## {name}
+
 {info}
 
 
@@ -50,6 +57,8 @@ Modules docs:
 
 
 {modules}
+
+
 """
 
 

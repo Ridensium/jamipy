@@ -1,4 +1,5 @@
 ## device
+
 non-publick module for providing usefull information about the device like is it touch or offline etc.
 some widgets will may need such info to chanche stylin or to be mobile friendly
 all that data is avaivable in the class `Device` as well as css classes aded to the body for constants and `data-*` attributes for dynamic values.
@@ -6,6 +7,7 @@ all that data is avaivable in the class `Device` as well as css classes aded to 
 ## *class*:  Device()
 
 <details><summary>[]</summary>
+
 
   ```python
 class Device:
@@ -22,7 +24,9 @@ class Device:
 
   ```
 
+
 </details>
+
 
 publick class for providing the device info to the widgets if needed
 TOUCH - True if device is with touch screen
@@ -36,9 +40,11 @@ PIXELS - pixel ratio of the screen
 
 
 
+
 ## *function*:  device\_size()
 
 <details><summary>[]</summary>
+
 
   ```python
 def device_size():
@@ -64,7 +70,9 @@ def device_size():
 
   ```
 
+
 </details>
+
 
 getting device screen size, runs once at importing jamipy
 and adding classes to the body
@@ -73,9 +81,11 @@ tall, tall-1 - for portrait screens with less than 1.9 ratio like tablets
 tall, tall-2 - usefull for distinguish smartphones
 
 
+
 ## *function*:  network()
 
 <details><summary>[event=None, *args, **kwargs]</summary>
+
 
   ```python
 def network(event=None, *args, **kwargs):
@@ -86,14 +96,18 @@ def network(event=None, *args, **kwargs):
 
   ```
 
+
 </details>
 
+
 runs on network status cnanges and update current status
+
 
 
 ## *function*:  resize()
 
 <details><summary>[event=None, *args, **kwargs]</summary>
+
 
   ```python
 def resize(event=None, *args, **kwargs):
@@ -109,14 +123,18 @@ def resize(event=None, *args, **kwargs):
 
   ```
 
+
 </details>
 
+
 runs on window resize and update current size and orientation data
+
 
 
 ## *function*:  touch()
 
 <details><summary>[]</summary>
+
 
   ```python
 def touch():
@@ -133,8 +151,12 @@ def touch():
 
   ```
 
+
 </details>
 
+
 checking if device is touch, runs once at importing jamipy
+
+
 
 

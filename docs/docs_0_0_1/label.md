@@ -1,4 +1,5 @@
 ## label
+
 publick module for Label widget
 by default uses for the icons googles material-symbols-rounded
 with <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />    
@@ -7,6 +8,7 @@ in the html.head
 ## *class*:  Label()
 
 <details><summary>[text: str = '', icon: str = None, icon_align: src.m_enums.IconAlign = '', roles: str = None]</summary>
+
 
   ```python
 class Label(Component):
@@ -78,14 +80,18 @@ class Label(Component):
 
   ```
 
+
 </details>
+
 
 basic Label widget with text and icon
 it has text and icon, and ways to change the icon position
 
+
 ### *method*:  \_\_init\_\_()
 
 <details><summary>[self, text: str = '', icon: str = None, icon_align: src.m_enums.IconAlign = '', roles: str = None]</summary>
+
 
   ```python
     def __init__(self, text:str='', icon:str=None, icon_align:IconAlign=IconAlign.NONE, roles:str=None):
@@ -106,14 +112,18 @@ it has text and icon, and ways to change the icon position
 
   ```
 
+
 </details>
+
 
 makes widget with element by default div
 if provided roles adds them
 
+
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4349001216'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4308418048'>]</summary>
+
 
   ```python
     def display(self, parent_el=document.body):
@@ -123,14 +133,18 @@ if provided roles adds them
 
   ```
 
+
 </details>
+
 
 appends the widget to html element in `parent_el`,
 which default value is the webpage body
 
+
 ### *method*:  get\_event\_handler()
 
 <details><summary>[self, event_name]</summary>
+
 
   ```python
     def get_event_handler(self, event_name):
@@ -139,13 +153,17 @@ which default value is the webpage body
 
   ```
 
+
 </details>
 
+
 sometimes we may need to know what was the handler we set above
+
 
 ### *method*:  get\_style()
 
 <details><summary>[self, name=None) -> dic]</summary>
+
 
   ```python
     def get_style(self, name=None)->dict:
@@ -161,13 +179,17 @@ sometimes we may need to know what was the handler we set above
 
   ```
 
+
 </details>
 
+
 gets all if `name=None` or specific inline style/styles
+
 
 ### *method*:  remove()
 
 <details><summary>[self]</summary>
+
 
   ```python
     def remove(self):
@@ -176,13 +198,17 @@ gets all if `name=None` or specific inline style/styles
 
   ```
 
+
 </details>
 
+
 removing widget from its parent
+
 
 ### *method*:  set\_event\_handler()
 
 <details><summary>[self, event_name: str, handler) -> Non]</summary>
+
 
   ```python
     def set_event_handler(self, event_name:str, handler)->None:
@@ -191,10 +217,12 @@ removing widget from its parent
 
   ```
 
+
 </details>
 
-        ading event handler for the widget, the handler will receive as first argument the event object
-        example:
+
+ading event handler for the widget, the handler will receive as first argument the event object
+example:
 
 ```python
 
@@ -205,11 +233,12 @@ def fn(*args)
 widget.set_event_handler('click', fn)
 
 ```
-        
+
 
 ### *method*:  set\_parent()
 
 <details><summary>[self, parent: 'Component', at_begining=False]</summary>
+
 
   ```python
     def set_parent(self, parent:'Component', at_begining=False):
@@ -221,13 +250,17 @@ widget.set_event_handler('click', fn)
 
   ```
 
+
 </details>
 
+
 adding widget to parent one
+
 
 ### *method*:  style()
 
 <details><summary>[self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs]</summary>
+
 
   ```python
     def style(self, border:str=None, text_align:str=None, tooltip:str=None, font:str=None, font_size:str|int=None, font_weight:int=None, color:str=None, background:str=None, bold:bool=None, width:str|int=None, height:str|int=None, italic:bool=None, **kwargs):
@@ -258,7 +291,9 @@ adding widget to parent one
 
   ```
 
+
 </details>
+
 
 its recommended to use classes for styling html instead inline css
 but with this method you can add inline styles to the widget
@@ -269,6 +304,8 @@ values if should be provided in css example:
 `border`, `font_size`, `width` and `height` if given as `int` will be parsed as pixels
 keep in mind the in jamipy you have better ways for styling with role/roles and custom/dynamic css stylesheets
 it adds the styles doesnt clean all old ones
+
+
 
 
 

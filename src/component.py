@@ -76,15 +76,16 @@ class Component:
         ading event handler for the widget, the handler will receive as first argument the event object
         example:
 
-```python
+        ```python
 
-def fn(event=None)
-def fn(self, event=None)
-def fn(*args)
+        def fn(event=None)
+        def fn(self, event=None)
+        def fn(*args)
 
-widget.set_event_handler('click', fn)
+        widget.set_event_handler('click', fn)
 
-```
+        ```
+        
         """
         setattr(self._el, f'on{event_name}', handler)
 

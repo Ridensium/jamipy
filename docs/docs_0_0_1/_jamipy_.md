@@ -1,4 +1,5 @@
 ## jamipy
+
 **JAMIPY** - @Ridensium - 2025 - MIT License
 
 A UI widget library for building web apps with **PyScript**.
@@ -28,3 +29,5 @@ Modules docs:
 - [m_enums](m_enums.md)
 - [pill](pill.md)
 - [spacer](spacer.md)
+
+

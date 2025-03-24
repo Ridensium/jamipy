@@ -10,21 +10,21 @@ from .m_enums import *
 #shortcut to the js method
 create_el = document.createElement
 
-def el_from_template(template:dict=None)->Element:
+def el_from_template(template:dict=None)->'Element':
     """
     non-publick fn for making elements from template like:
 
-```json
+    ```json
 
-{
-'tag_name':  'div',
-'roles':'label',
-'children': []
-}
+    {
+        "tag_name":  "div",
+        "roles":"label",
+        "children": []
+    }
 
-```
+    ```
 
-useful for widgets with compund html to make copie from template instead making and nesting new one
+    useful for widgets with compund html to make copie from template instead making and nesting new one
     """
 
     el:Element = create_el(template['tag_name'])

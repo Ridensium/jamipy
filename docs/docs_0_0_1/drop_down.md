@@ -47,7 +47,7 @@ class DropDown(Container):
 
 publick class for the drop down widget
 
-#### *method*:  __iadd__()
+#### *method*:  \_\_iadd\_\_()
 
 <details><summary>__iadd__(self, component: src.component.Component)</summary>
 
@@ -65,7 +65,7 @@ augmented adding of children widgets
 will apend the child widget at end
 `parent += child`
 
-#### *method*:  __init__()
+#### *method*:  \_\_init\_\_()
 
 <details><summary>__init__(self, items: list | dict = None, selected_value=None, include_placeholder: bool = True, placeholder='', enabled=True)</summary>
 
@@ -97,7 +97,7 @@ will apend the child widget at end
 
 will add children widgets provided by the `children:list`
 
-#### *method*:  __isub__()
+#### *method*:  \_\_isub\_\_()
 
 <details><summary>__isub__(self, component: src.component.Component)</summary>
 
@@ -114,7 +114,7 @@ will add children widgets provided by the `children:list`
 augmented removal of children widgets
 `parent -= child`
 
-#### *method*:  add_child()
+#### *method*:  add\_child()
 
 <details><summary>add_child(self, component: src.component.Component)</summary>
 
@@ -129,7 +129,7 @@ augmented removal of children widgets
 
 adsing widget child at end
 
-#### *method*:  add_child_as_first()
+#### *method*:  add\_child\_as\_first()
 
 <details><summary>add_child_as_first(self, component: src.component.Component)</summary>
 
@@ -180,7 +180,7 @@ removes all children
 
 #### *method*:  display()
 
-<details><summary>display(self, parent_el=<MagicMock name='mock.document.body' id='4309351936'>)</summary>
+<details><summary>display(self, parent_el=<MagicMock name='mock.document.body' id='4384243200'>)</summary>
 
   ```python
     def display(self, parent_el=document.body):
@@ -195,7 +195,7 @@ removes all children
 appends the widget to html element in `parent_el`,
 which default value is the webpage body
 
-#### *method*:  get_event_handler()
+#### *method*:  get\_event\_handler()
 
 <details><summary>get_event_handler(self, event_name)</summary>
 
@@ -210,7 +210,7 @@ which default value is the webpage body
 
 sometimes we may need to know what was the handler we set above
 
-#### *method*:  get_style()
+#### *method*:  get\_style()
 
 <details><summary>get_style(self, name=None) -> dict</summary>
 
@@ -247,7 +247,7 @@ gets all if `name=None` or specific inline style/styles
 
 removing widget from its parent
 
-#### *method*:  remove_child()
+#### *method*:  remove\_child()
 
 <details><summary>remove_child(self, component: src.component.Component)</summary>
 
@@ -262,7 +262,7 @@ removing widget from its parent
 
 removes child widget from itself
 
-#### *method*:  set_event_handler()
+#### *method*:  set\_event\_handler()
 
 <details><summary>set_event_handler(self, event_name: str, handler) -> None</summary>
 
@@ -289,7 +289,7 @@ widget.set_event_handler('click', fn)
 ```
         
 
-#### *method*:  set_parent()
+#### *method*:  set\_parent()
 
 <details><summary>set_parent(self, parent: 'Component', at_begining=False)</summary>
 
@@ -377,7 +377,7 @@ class DropDownOption(Component):
 
 non-publick class for the drop down option widget
 
-#### *method*:  __init__()
+#### *method*:  \_\_init\_\_()
 
 <details><summary>__init__(self, value=None, key='')</summary>
 
@@ -400,7 +400,7 @@ if provided roles adds them
 
 #### *method*:  display()
 
-<details><summary>display(self, parent_el=<MagicMock name='mock.document.body' id='4309351936'>)</summary>
+<details><summary>display(self, parent_el=<MagicMock name='mock.document.body' id='4384243200'>)</summary>
 
   ```python
     def display(self, parent_el=document.body):
@@ -415,7 +415,7 @@ if provided roles adds them
 appends the widget to html element in `parent_el`,
 which default value is the webpage body
 
-#### *method*:  get_event_handler()
+#### *method*:  get\_event\_handler()
 
 <details><summary>get_event_handler(self, event_name)</summary>
 
@@ -430,7 +430,7 @@ which default value is the webpage body
 
 sometimes we may need to know what was the handler we set above
 
-#### *method*:  get_style()
+#### *method*:  get\_style()
 
 <details><summary>get_style(self, name=None) -> dict</summary>
 
@@ -467,7 +467,7 @@ gets all if `name=None` or specific inline style/styles
 
 removing widget from its parent
 
-#### *method*:  set_event_handler()
+#### *method*:  set\_event\_handler()
 
 <details><summary>set_event_handler(self, event_name: str, handler) -> None</summary>
 
@@ -494,7 +494,7 @@ widget.set_event_handler('click', fn)
 ```
         
 
-#### *method*:  set_parent()
+#### *method*:  set\_parent()
 
 <details><summary>set_parent(self, parent: 'Component', at_begining=False)</summary>
 

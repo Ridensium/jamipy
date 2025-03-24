@@ -17,7 +17,7 @@ DOCS = './docs/dev_docs'
 EXCLUDE = ['pyscript', 'js', 'window', 'navigator', 'document']
 
 # template for all objects
-OBJECT_TEMPLATE = """{heading} *{type}*:  {name}()
+OBJECT_TEMPLATE = """{heading} *{type}*:  {name_heading}()
 
 <details><summary>{name}{signature}</summary>
 
@@ -128,6 +128,7 @@ class Object:
             heading = '#'*self.heading,
             type=type,
             name=name,
+            name_heading = name.replace('_', '\_'),
             signature=signature,
             info=parsed_doc,
             source=parse_source(source))  

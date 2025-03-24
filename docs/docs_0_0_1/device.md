@@ -36,7 +36,7 @@ PIXELS - pixel ratio of the screen
 
 
 
-## *function*:  device_size()
+## *function*:  device\_size()
 
 <details><summary>device_size()</summary>
 

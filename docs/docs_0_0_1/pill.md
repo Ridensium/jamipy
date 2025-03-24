@@ -37,7 +37,7 @@ class Pill(Label):
 basic Label widget with text and icon
 it has text and icon, and ways to change the icon position
 
-#### *method*:  __init__()
+#### *method*:  \_\_init\_\_()
 
 <details><summary>__init__(self, text='', icon=None, icon_align='', roles=None)</summary>
 
@@ -54,7 +54,7 @@ if provided roles adds them
 
 #### *method*:  display()
 
-<details><summary>display(self, parent_el=<MagicMock name='mock.document.body' id='4309351936'>)</summary>
+<details><summary>display(self, parent_el=<MagicMock name='mock.document.body' id='4384243200'>)</summary>
 
   ```python
     def display(self, parent_el=document.body):
@@ -69,7 +69,7 @@ if provided roles adds them
 appends the widget to html element in `parent_el`,
 which default value is the webpage body
 
-#### *method*:  get_event_handler()
+#### *method*:  get\_event\_handler()
 
 <details><summary>get_event_handler(self, event_name)</summary>
 
@@ -84,7 +84,7 @@ which default value is the webpage body
 
 sometimes we may need to know what was the handler we set above
 
-#### *method*:  get_style()
+#### *method*:  get\_style()
 
 <details><summary>get_style(self, name=None) -> dict</summary>
 
@@ -121,7 +121,7 @@ gets all if `name=None` or specific inline style/styles
 
 removing widget from its parent
 
-#### *method*:  set_event_handler()
+#### *method*:  set\_event\_handler()
 
 <details><summary>set_event_handler(self, event_name: str, handler) -> None</summary>
 
@@ -148,7 +148,7 @@ widget.set_event_handler('click', fn)
 ```
         
 
-#### *method*:  set_parent()
+#### *method*:  set\_parent()
 
 <details><summary>set_parent(self, parent: 'Component', at_begining=False)</summary>
 

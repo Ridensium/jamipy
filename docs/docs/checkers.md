@@ -85,7 +85,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4342758912'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
 
 
   ```python
@@ -414,7 +414,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4342758912'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
 
 
   ```python
@@ -740,7 +740,7 @@ if provided roles adds them
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4342758912'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
 
 
   ```python
@@ -1170,7 +1170,7 @@ removes all children
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4342758912'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4351213056'>]</summary>
 
 
   ```python

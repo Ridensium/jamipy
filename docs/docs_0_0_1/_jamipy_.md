@@ -1,17 +1,17 @@
 ## jamipy
-> **JAMIPY** - @Ridensium - 2025 - MIT License
+**JAMIPY** - @Ridensium - 2025 - MIT License
 
-> A UI widget library for building web apps with **PyScript**.
+A UI widget library for building web apps with **PyScript**.
 
-> #### Emphasis on:
+#### Emphasis on:
 
-> **speed**, especially in the *MicroPython* interpreter
+**speed**, especially in the *MicroPython* interpreter
 
-> **pythonic** usage
+**pythonic** usage
 
-> **small** package size
+**small** package size
 
-> **no thirdparty** python or javascript libraries
+**no thirdparty** python or javascript libraries
 
 
 Modules docs:

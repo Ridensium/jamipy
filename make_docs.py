@@ -17,15 +17,17 @@ DOCS = './docs/dev_docs'
 EXCLUDE = ['pyscript', 'js', 'window', 'navigator', 'document']
 
 # template for all objects
-OBJECT_TEMPLATE = """{heading} *{type}*:  {name}{signature}
-{info}
-<details><summary><sub>expand source</sub></summary>
+OBJECT_TEMPLATE = """{heading} *{type}*:  {name}()
+
+<details><summary>{name}{signature}</summary>
 
   ```python
 {source}
   ```
 
 </details>
+
+{info}
 
 """
 
@@ -73,8 +75,13 @@ def parse_docstrings(text):
     for l in range(len(lines)):
         line = lines[l]
         if len(line) > 0:
+            #clean empty at begining
             line = re.sub(pattern_begin_line, '', line, flags=re.DOTALL)
-            lines[l] = f'> {line}' if line not in ['[!NOTE]', '[!TIP]','[!IMPORTANT]','[!WARNING]','[!CAUTION]'] else f'\n> {line}'
+       
+            # to make texts as quotes but
+            #lines[l] = f'> {line}' if line in ['[!NOTE]', '[!TIP]','[!IMPORTANT]','[!WARNING]','[!CAUTION]'] else f'\n> {line}'
+    
+    
     return '\n'.join(lines)
 
 # clean the source for the expand section
@@ -120,7 +127,7 @@ class Object:
         self.doc = self.template.format(
             heading = '#'*self.heading,
             type=type,
-            name=name.replace('_', '\_'), ## to prevent markdon mising it
+            name=name,
             signature=signature,
             info=parsed_doc,
             source=parse_source(source))  

@@ -1,9 +1,9 @@
 ## drop_down
-> publick class for DropDown widget
+publick class for DropDown widget
 
-## *class*:  DropDown(items: list | dict = None, selected_value=None, include_placeholder: bool = True, placeholder='', enabled=True)
-> publick class for the drop down widget
-<details><summary><sub>expand source</sub></summary>
+## *class*:  DropDown()
+
+<details><summary>DropDown(items: list | dict = None, selected_value=None, include_placeholder: bool = True, placeholder='', enabled=True)</summary>
 
   ```python
 class DropDown(Container):
@@ -45,11 +45,11 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  \_\_iadd\_\_(self, component: src.component.Component)
-> augmented adding of children widgets
-> will apend the child widget at end
-> `parent += child`
-<details><summary><sub>expand source</sub></summary>
+publick class for the drop down widget
+
+#### *method*:  __iadd__()
+
+<details><summary>__iadd__(self, component: src.component.Component)</summary>
 
   ```python
     def __iadd__(self, component:Component):
@@ -61,9 +61,13 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  \_\_init\_\_(self, items: list | dict = None, selected_value=None, include_placeholder: bool = True, placeholder='', enabled=True)
-> will add children widgets provided by the `children:list`
-<details><summary><sub>expand source</sub></summary>
+augmented adding of children widgets
+will apend the child widget at end
+`parent += child`
+
+#### *method*:  __init__()
+
+<details><summary>__init__(self, items: list | dict = None, selected_value=None, include_placeholder: bool = True, placeholder='', enabled=True)</summary>
 
   ```python
     def __init__(self, items:list|dict=None, selected_value=None, include_placeholder:bool=True, placeholder='', enabled=True):
@@ -91,10 +95,11 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  \_\_isub\_\_(self, component: src.component.Component)
-> augmented removal of children widgets
-> `parent -= child`
-<details><summary><sub>expand source</sub></summary>
+will add children widgets provided by the `children:list`
+
+#### *method*:  __isub__()
+
+<details><summary>__isub__(self, component: src.component.Component)</summary>
 
   ```python
     def __isub__(self, component:Component):
@@ -106,9 +111,12 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  add\_child(self, component: src.component.Component)
-> adsing widget child at end
-<details><summary><sub>expand source</sub></summary>
+augmented removal of children widgets
+`parent -= child`
+
+#### *method*:  add_child()
+
+<details><summary>add_child(self, component: src.component.Component)</summary>
 
   ```python
     def add_child(self, component:Component):
@@ -119,10 +127,11 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  add\_child\_as\_first(self, component: src.component.Component)
-> adsing widget child at begining
-> for speed esp when lots of children is in separate method to prevent `if`
-<details><summary><sub>expand source</sub></summary>
+adsing widget child at end
+
+#### *method*:  add_child_as_first()
+
+<details><summary>add_child_as_first(self, component: src.component.Component)</summary>
 
   ```python
     def add_child_as_first(self, component:Component):
@@ -133,9 +142,12 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  change(self, event)
+adsing widget child at begining
+for speed esp when lots of children is in separate method to prevent `if`
 
-<details><summary><sub>expand source</sub></summary>
+#### *method*:  change()
+
+<details><summary>change(self, event)</summary>
 
   ```python
     def change(self, event):
@@ -149,9 +161,11 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  clear(self)
-> removes all children
-<details><summary><sub>expand source</sub></summary>
+
+
+#### *method*:  clear()
+
+<details><summary>clear(self)</summary>
 
   ```python
     def clear(self):
@@ -162,10 +176,11 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  display(self, parent_el=<MagicMock name='mock.document.body' id='4321706400'>)
-> appends the widget to html element in `parent_el`,
-> which default value is the webpage body
-<details><summary><sub>expand source</sub></summary>
+removes all children
+
+#### *method*:  display()
+
+<details><summary>display(self, parent_el=<MagicMock name='mock.document.body' id='4309351936'>)</summary>
 
   ```python
     def display(self, parent_el=document.body):
@@ -177,9 +192,12 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  get\_event\_handler(self, event_name)
-> sometimes we may need to know what was the handler we set above
-<details><summary><sub>expand source</sub></summary>
+appends the widget to html element in `parent_el`,
+which default value is the webpage body
+
+#### *method*:  get_event_handler()
+
+<details><summary>get_event_handler(self, event_name)</summary>
 
   ```python
     def get_event_handler(self, event_name):
@@ -190,9 +208,11 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  get\_style(self, name=None) -> dict
-> gets all if `name=None` or specific inline style/styles
-<details><summary><sub>expand source</sub></summary>
+sometimes we may need to know what was the handler we set above
+
+#### *method*:  get_style()
+
+<details><summary>get_style(self, name=None) -> dict</summary>
 
   ```python
     def get_style(self, name=None)->dict:
@@ -210,9 +230,11 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  remove(self)
-> removing widget from its parent
-<details><summary><sub>expand source</sub></summary>
+gets all if `name=None` or specific inline style/styles
+
+#### *method*:  remove()
+
+<details><summary>remove(self)</summary>
 
   ```python
     def remove(self):
@@ -223,9 +245,11 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  remove\_child(self, component: src.component.Component)
-> removes child widget from itself
-<details><summary><sub>expand source</sub></summary>
+removing widget from its parent
+
+#### *method*:  remove_child()
+
+<details><summary>remove_child(self, component: src.component.Component)</summary>
 
   ```python
     def remove_child(self, component:Component):
@@ -236,21 +260,11 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  set\_event\_handler(self, event_name: str, handler) -> None
-> ading event handler for the widget, the handler will receive as first argument the event object
-> example:
+removes child widget from itself
 
-> ```python
+#### *method*:  set_event_handler()
 
-> def fn(event=None)
-> def fn(self, event=None)
-> def fn(*args)
-
-> widget.set_event_handler('click', fn)
-
-> ```
-> 
-<details><summary><sub>expand source</sub></summary>
+<details><summary>set_event_handler(self, event_name: str, handler) -> None</summary>
 
   ```python
     def set_event_handler(self, event_name:str, handler)->None:
@@ -261,9 +275,23 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  set\_parent(self, parent: 'Component', at_begining=False)
-> adding widget to parent one
-<details><summary><sub>expand source</sub></summary>
+        ading event handler for the widget, the handler will receive as first argument the event object
+        example:
+
+```python
+
+def fn(event=None)
+def fn(self, event=None)
+def fn(*args)
+
+widget.set_event_handler('click', fn)
+
+```
+        
+
+#### *method*:  set_parent()
+
+<details><summary>set_parent(self, parent: 'Component', at_begining=False)</summary>
 
   ```python
     def set_parent(self, parent:'Component', at_begining=False):
@@ -277,17 +305,11 @@ class DropDown(Container):
 
 </details>
 
-#### *method*:  style(self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs)
-> its recommended to use classes for styling html instead inline css
-> but with this method you can add inline styles to the widget
-> for better performace if adding multipe add them together to reflow the element once
-> apart from optional parameters you can provide css keywords with underscore instead dash
-> values if should be provided in css example:
-> `widget.style(font_size=12, flex_direction='column', border = '1px solid gray')`
-> `border`, `font_size`, `width` and `height` if given as `int` will be parsed as pixels
-> keep in mind the in jamipy you have better ways for styling with role/roles and custom/dynamic css stylesheets
-> it adds the styles doesnt clean all old ones
-<details><summary><sub>expand source</sub></summary>
+adding widget to parent one
+
+#### *method*:  style()
+
+<details><summary>style(self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs)</summary>
 
   ```python
     def style(self, border:str=None, text_align:str=None, tooltip:str=None, font:str=None, font_size:str|int=None, font_weight:int=None, color:str=None, background:str=None, bold:bool=None, width:str|int=None, height:str|int=None, italic:bool=None, **kwargs):
@@ -320,10 +342,20 @@ class DropDown(Container):
 
 </details>
 
+its recommended to use classes for styling html instead inline css
+but with this method you can add inline styles to the widget
+for better performace if adding multipe add them together to reflow the element once
+apart from optional parameters you can provide css keywords with underscore instead dash
+values if should be provided in css example:
+`widget.style(font_size=12, flex_direction='column', border = '1px solid gray')`
+`border`, `font_size`, `width` and `height` if given as `int` will be parsed as pixels
+keep in mind the in jamipy you have better ways for styling with role/roles and custom/dynamic css stylesheets
+it adds the styles doesnt clean all old ones
 
-## *class*:  DropDownOption(value=None, key='')
-> non-publick class for the drop down option widget
-<details><summary><sub>expand source</sub></summary>
+
+## *class*:  DropDownOption()
+
+<details><summary>DropDownOption(value=None, key='')</summary>
 
   ```python
 class DropDownOption(Component):
@@ -343,10 +375,11 @@ class DropDownOption(Component):
 
 </details>
 
-#### *method*:  \_\_init\_\_(self, value=None, key='')
-> makes widget with element by default div
-> if provided roles adds them
-<details><summary><sub>expand source</sub></summary>
+non-publick class for the drop down option widget
+
+#### *method*:  __init__()
+
+<details><summary>__init__(self, value=None, key='')</summary>
 
   ```python
     def __init__(self, value=None, key=''):
@@ -362,10 +395,12 @@ class DropDownOption(Component):
 
 </details>
 
-#### *method*:  display(self, parent_el=<MagicMock name='mock.document.body' id='4321706400'>)
-> appends the widget to html element in `parent_el`,
-> which default value is the webpage body
-<details><summary><sub>expand source</sub></summary>
+makes widget with element by default div
+if provided roles adds them
+
+#### *method*:  display()
+
+<details><summary>display(self, parent_el=<MagicMock name='mock.document.body' id='4309351936'>)</summary>
 
   ```python
     def display(self, parent_el=document.body):
@@ -377,9 +412,12 @@ class DropDownOption(Component):
 
 </details>
 
-#### *method*:  get\_event\_handler(self, event_name)
-> sometimes we may need to know what was the handler we set above
-<details><summary><sub>expand source</sub></summary>
+appends the widget to html element in `parent_el`,
+which default value is the webpage body
+
+#### *method*:  get_event_handler()
+
+<details><summary>get_event_handler(self, event_name)</summary>
 
   ```python
     def get_event_handler(self, event_name):
@@ -390,9 +428,11 @@ class DropDownOption(Component):
 
 </details>
 
-#### *method*:  get\_style(self, name=None) -> dict
-> gets all if `name=None` or specific inline style/styles
-<details><summary><sub>expand source</sub></summary>
+sometimes we may need to know what was the handler we set above
+
+#### *method*:  get_style()
+
+<details><summary>get_style(self, name=None) -> dict</summary>
 
   ```python
     def get_style(self, name=None)->dict:
@@ -410,9 +450,11 @@ class DropDownOption(Component):
 
 </details>
 
-#### *method*:  remove(self)
-> removing widget from its parent
-<details><summary><sub>expand source</sub></summary>
+gets all if `name=None` or specific inline style/styles
+
+#### *method*:  remove()
+
+<details><summary>remove(self)</summary>
 
   ```python
     def remove(self):
@@ -423,21 +465,11 @@ class DropDownOption(Component):
 
 </details>
 
-#### *method*:  set\_event\_handler(self, event_name: str, handler) -> None
-> ading event handler for the widget, the handler will receive as first argument the event object
-> example:
+removing widget from its parent
 
-> ```python
+#### *method*:  set_event_handler()
 
-> def fn(event=None)
-> def fn(self, event=None)
-> def fn(*args)
-
-> widget.set_event_handler('click', fn)
-
-> ```
-> 
-<details><summary><sub>expand source</sub></summary>
+<details><summary>set_event_handler(self, event_name: str, handler) -> None</summary>
 
   ```python
     def set_event_handler(self, event_name:str, handler)->None:
@@ -448,9 +480,23 @@ class DropDownOption(Component):
 
 </details>
 
-#### *method*:  set\_parent(self, parent: 'Component', at_begining=False)
-> adding widget to parent one
-<details><summary><sub>expand source</sub></summary>
+        ading event handler for the widget, the handler will receive as first argument the event object
+        example:
+
+```python
+
+def fn(event=None)
+def fn(self, event=None)
+def fn(*args)
+
+widget.set_event_handler('click', fn)
+
+```
+        
+
+#### *method*:  set_parent()
+
+<details><summary>set_parent(self, parent: 'Component', at_begining=False)</summary>
 
   ```python
     def set_parent(self, parent:'Component', at_begining=False):
@@ -464,17 +510,11 @@ class DropDownOption(Component):
 
 </details>
 
-#### *method*:  style(self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs)
-> its recommended to use classes for styling html instead inline css
-> but with this method you can add inline styles to the widget
-> for better performace if adding multipe add them together to reflow the element once
-> apart from optional parameters you can provide css keywords with underscore instead dash
-> values if should be provided in css example:
-> `widget.style(font_size=12, flex_direction='column', border = '1px solid gray')`
-> `border`, `font_size`, `width` and `height` if given as `int` will be parsed as pixels
-> keep in mind the in jamipy you have better ways for styling with role/roles and custom/dynamic css stylesheets
-> it adds the styles doesnt clean all old ones
-<details><summary><sub>expand source</sub></summary>
+adding widget to parent one
+
+#### *method*:  style()
+
+<details><summary>style(self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs)</summary>
 
   ```python
     def style(self, border:str=None, text_align:str=None, tooltip:str=None, font:str=None, font_size:str|int=None, font_weight:int=None, color:str=None, background:str=None, bold:bool=None, width:str|int=None, height:str|int=None, italic:bool=None, **kwargs):
@@ -506,6 +546,16 @@ class DropDownOption(Component):
   ```
 
 </details>
+
+its recommended to use classes for styling html instead inline css
+but with this method you can add inline styles to the widget
+for better performace if adding multipe add them together to reflow the element once
+apart from optional parameters you can provide css keywords with underscore instead dash
+values if should be provided in css example:
+`widget.style(font_size=12, flex_direction='column', border = '1px solid gray')`
+`border`, `font_size`, `width` and `height` if given as `int` will be parsed as pixels
+keep in mind the in jamipy you have better ways for styling with role/roles and custom/dynamic css stylesheets
+it adds the styles doesnt clean all old ones
 
 
 

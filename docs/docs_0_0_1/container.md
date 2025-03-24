@@ -1,14 +1,10 @@
 ## container
-> module with the class `Container` used for widgets with ability to add children ones
-> can be used as well to build custom widgets
+module with the class `Container` used for widgets with ability to add children ones
+can be used as well to build custom widgets
 
-## *class*:  Container(children: list[src.component.Component] = None, *args, **kwargs)
-> public class for all container like widgets as well making generic one
-> adding methods to the *class* **Component** to do so
-> by defaul the orientation of widgets inside it is column
-> the widgets based on it in jamipy will have different orientations
-> and if you make custom one, can apply different roles or styles to change it
-<details><summary><sub>expand source</sub></summary>
+## *class*:  Container()
+
+<details><summary>Container(children: list[src.component.Component] = None, *args, **kwargs)</summary>
 
   ```python
 class Container(Component):
@@ -65,11 +61,15 @@ class Container(Component):
 
 </details>
 
-#### *method*:  \_\_iadd\_\_(self, component: src.component.Component)
-> augmented adding of children widgets
-> will apend the child widget at end
-> `parent += child`
-<details><summary><sub>expand source</sub></summary>
+public class for all container like widgets as well making generic one
+adding methods to the *class* **Component** to do so
+by defaul the orientation of widgets inside it is column
+the widgets based on it in jamipy will have different orientations
+and if you make custom one, can apply different roles or styles to change it
+
+#### *method*:  __iadd__()
+
+<details><summary>__iadd__(self, component: src.component.Component)</summary>
 
   ```python
     def __iadd__(self, component:Component):
@@ -81,9 +81,13 @@ class Container(Component):
 
 </details>
 
-#### *method*:  \_\_init\_\_(self, children: list[src.component.Component] = None, *args, **kwargs)
-> will add children widgets provided by the `children:list`
-<details><summary><sub>expand source</sub></summary>
+augmented adding of children widgets
+will apend the child widget at end
+`parent += child`
+
+#### *method*:  __init__()
+
+<details><summary>__init__(self, children: list[src.component.Component] = None, *args, **kwargs)</summary>
 
   ```python
     def __init__(self, children:list[Component]=None, *args, **kwargs):
@@ -99,10 +103,11 @@ class Container(Component):
 
 </details>
 
-#### *method*:  \_\_isub\_\_(self, component: src.component.Component)
-> augmented removal of children widgets
-> `parent -= child`
-<details><summary><sub>expand source</sub></summary>
+will add children widgets provided by the `children:list`
+
+#### *method*:  __isub__()
+
+<details><summary>__isub__(self, component: src.component.Component)</summary>
 
   ```python
     def __isub__(self, component:Component):
@@ -114,9 +119,12 @@ class Container(Component):
 
 </details>
 
-#### *method*:  add\_child(self, component: src.component.Component)
-> adsing widget child at end
-<details><summary><sub>expand source</sub></summary>
+augmented removal of children widgets
+`parent -= child`
+
+#### *method*:  add_child()
+
+<details><summary>add_child(self, component: src.component.Component)</summary>
 
   ```python
     def add_child(self, component:Component):
@@ -127,10 +135,11 @@ class Container(Component):
 
 </details>
 
-#### *method*:  add\_child\_as\_first(self, component: src.component.Component)
-> adsing widget child at begining
-> for speed esp when lots of children is in separate method to prevent `if`
-<details><summary><sub>expand source</sub></summary>
+adsing widget child at end
+
+#### *method*:  add_child_as_first()
+
+<details><summary>add_child_as_first(self, component: src.component.Component)</summary>
 
   ```python
     def add_child_as_first(self, component:Component):
@@ -141,9 +150,12 @@ class Container(Component):
 
 </details>
 
-#### *method*:  clear(self)
-> removes all children
-<details><summary><sub>expand source</sub></summary>
+adsing widget child at begining
+for speed esp when lots of children is in separate method to prevent `if`
+
+#### *method*:  clear()
+
+<details><summary>clear(self)</summary>
 
   ```python
     def clear(self):
@@ -154,10 +166,11 @@ class Container(Component):
 
 </details>
 
-#### *method*:  display(self, parent_el=<MagicMock name='mock.document.body' id='4321706400'>)
-> appends the widget to html element in `parent_el`,
-> which default value is the webpage body
-<details><summary><sub>expand source</sub></summary>
+removes all children
+
+#### *method*:  display()
+
+<details><summary>display(self, parent_el=<MagicMock name='mock.document.body' id='4309351936'>)</summary>
 
   ```python
     def display(self, parent_el=document.body):
@@ -169,9 +182,12 @@ class Container(Component):
 
 </details>
 
-#### *method*:  get\_event\_handler(self, event_name)
-> sometimes we may need to know what was the handler we set above
-<details><summary><sub>expand source</sub></summary>
+appends the widget to html element in `parent_el`,
+which default value is the webpage body
+
+#### *method*:  get_event_handler()
+
+<details><summary>get_event_handler(self, event_name)</summary>
 
   ```python
     def get_event_handler(self, event_name):
@@ -182,9 +198,11 @@ class Container(Component):
 
 </details>
 
-#### *method*:  get\_style(self, name=None) -> dict
-> gets all if `name=None` or specific inline style/styles
-<details><summary><sub>expand source</sub></summary>
+sometimes we may need to know what was the handler we set above
+
+#### *method*:  get_style()
+
+<details><summary>get_style(self, name=None) -> dict</summary>
 
   ```python
     def get_style(self, name=None)->dict:
@@ -202,9 +220,11 @@ class Container(Component):
 
 </details>
 
-#### *method*:  remove(self)
-> removing widget from its parent
-<details><summary><sub>expand source</sub></summary>
+gets all if `name=None` or specific inline style/styles
+
+#### *method*:  remove()
+
+<details><summary>remove(self)</summary>
 
   ```python
     def remove(self):
@@ -215,9 +235,11 @@ class Container(Component):
 
 </details>
 
-#### *method*:  remove\_child(self, component: src.component.Component)
-> removes child widget from itself
-<details><summary><sub>expand source</sub></summary>
+removing widget from its parent
+
+#### *method*:  remove_child()
+
+<details><summary>remove_child(self, component: src.component.Component)</summary>
 
   ```python
     def remove_child(self, component:Component):
@@ -228,21 +250,11 @@ class Container(Component):
 
 </details>
 
-#### *method*:  set\_event\_handler(self, event_name: str, handler) -> None
-> ading event handler for the widget, the handler will receive as first argument the event object
-> example:
+removes child widget from itself
 
-> ```python
+#### *method*:  set_event_handler()
 
-> def fn(event=None)
-> def fn(self, event=None)
-> def fn(*args)
-
-> widget.set_event_handler('click', fn)
-
-> ```
-> 
-<details><summary><sub>expand source</sub></summary>
+<details><summary>set_event_handler(self, event_name: str, handler) -> None</summary>
 
   ```python
     def set_event_handler(self, event_name:str, handler)->None:
@@ -253,9 +265,23 @@ class Container(Component):
 
 </details>
 
-#### *method*:  set\_parent(self, parent: 'Component', at_begining=False)
-> adding widget to parent one
-<details><summary><sub>expand source</sub></summary>
+        ading event handler for the widget, the handler will receive as first argument the event object
+        example:
+
+```python
+
+def fn(event=None)
+def fn(self, event=None)
+def fn(*args)
+
+widget.set_event_handler('click', fn)
+
+```
+        
+
+#### *method*:  set_parent()
+
+<details><summary>set_parent(self, parent: 'Component', at_begining=False)</summary>
 
   ```python
     def set_parent(self, parent:'Component', at_begining=False):
@@ -269,17 +295,11 @@ class Container(Component):
 
 </details>
 
-#### *method*:  style(self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs)
-> its recommended to use classes for styling html instead inline css
-> but with this method you can add inline styles to the widget
-> for better performace if adding multipe add them together to reflow the element once
-> apart from optional parameters you can provide css keywords with underscore instead dash
-> values if should be provided in css example:
-> `widget.style(font_size=12, flex_direction='column', border = '1px solid gray')`
-> `border`, `font_size`, `width` and `height` if given as `int` will be parsed as pixels
-> keep in mind the in jamipy you have better ways for styling with role/roles and custom/dynamic css stylesheets
-> it adds the styles doesnt clean all old ones
-<details><summary><sub>expand source</sub></summary>
+adding widget to parent one
+
+#### *method*:  style()
+
+<details><summary>style(self, border: str = None, text_align: str = None, tooltip: str = None, font: str = None, font_size: str | int = None, font_weight: int = None, color: str = None, background: str = None, bold: bool = None, width: str | int = None, height: str | int = None, italic: bool = None, **kwargs)</summary>
 
   ```python
     def style(self, border:str=None, text_align:str=None, tooltip:str=None, font:str=None, font_size:str|int=None, font_weight:int=None, color:str=None, background:str=None, bold:bool=None, width:str|int=None, height:str|int=None, italic:bool=None, **kwargs):
@@ -311,6 +331,16 @@ class Container(Component):
   ```
 
 </details>
+
+its recommended to use classes for styling html instead inline css
+but with this method you can add inline styles to the widget
+for better performace if adding multipe add them together to reflow the element once
+apart from optional parameters you can provide css keywords with underscore instead dash
+values if should be provided in css example:
+`widget.style(font_size=12, flex_direction='column', border = '1px solid gray')`
+`border`, `font_size`, `width` and `height` if given as `int` will be parsed as pixels
+keep in mind the in jamipy you have better ways for styling with role/roles and custom/dynamic css stylesheets
+it adds the styles doesnt clean all old ones
 
 
 

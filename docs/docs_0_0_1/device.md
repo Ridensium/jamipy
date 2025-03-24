@@ -1,19 +1,11 @@
 ## device
-> non-publick module for providing usefull information about the device like is it touch or offline etc.
-> some widgets will may need such info to chanche stylin or to be mobile friendly
-> all that data is avaivable in the class `Device` as well as css classes aded to the body for constants and `data-*` attributes for dynamic values.
+non-publick module for providing usefull information about the device like is it touch or offline etc.
+some widgets will may need such info to chanche stylin or to be mobile friendly
+all that data is avaivable in the class `Device` as well as css classes aded to the body for constants and `data-*` attributes for dynamic values.
 
 ## *class*:  Device()
-> publick class for providing the device info to the widgets if needed
-> TOUCH - True if device is with touch screen
-> D_WIDTH - device screen width
-> D_HEIGTH - device screen width
-> WIDTH - current window width in pixels 
-> HEIGHT - current window height
-> PORTRAIT - True if current orientation is such
-> LANDSCAPE - True if current orientation is such
-> PIXELS - pixel ratio of the screen
-<details><summary><sub>expand source</sub></summary>
+
+<details><summary>Device()</summary>
 
   ```python
 class Device:
@@ -32,15 +24,21 @@ class Device:
 
 </details>
 
+publick class for providing the device info to the widgets if needed
+TOUCH - True if device is with touch screen
+D_WIDTH - device screen width
+D_HEIGTH - device screen width
+WIDTH - current window width in pixels 
+HEIGHT - current window height
+PORTRAIT - True if current orientation is such
+LANDSCAPE - True if current orientation is such
+PIXELS - pixel ratio of the screen
 
 
-## *function*:  device\_size()
-> getting device screen size, runs once at importing jamipy
-> and adding classes to the body
-> wide - usefull for computer displays with combination of touch
-> tall, tall-1 - for portrait screens with less than 1.9 ratio like tablets
-> tall, tall-2 - usefull for distinguish smartphones
-<details><summary><sub>expand source</sub></summary>
+
+## *function*:  device_size()
+
+<details><summary>device_size()</summary>
 
   ```python
 def device_size():
@@ -68,10 +66,16 @@ def device_size():
 
 </details>
 
+getting device screen size, runs once at importing jamipy
+and adding classes to the body
+wide - usefull for computer displays with combination of touch
+tall, tall-1 - for portrait screens with less than 1.9 ratio like tablets
+tall, tall-2 - usefull for distinguish smartphones
 
-## *function*:  network(event=None, *args, **kwargs)
-> runs on network status cnanges and update current status
-<details><summary><sub>expand source</sub></summary>
+
+## *function*:  network()
+
+<details><summary>network(event=None, *args, **kwargs)</summary>
 
   ```python
 def network(event=None, *args, **kwargs):
@@ -84,10 +88,12 @@ def network(event=None, *args, **kwargs):
 
 </details>
 
+runs on network status cnanges and update current status
 
-## *function*:  resize(event=None, *args, **kwargs)
-> runs on window resize and update current size and orientation data
-<details><summary><sub>expand source</sub></summary>
+
+## *function*:  resize()
+
+<details><summary>resize(event=None, *args, **kwargs)</summary>
 
   ```python
 def resize(event=None, *args, **kwargs):
@@ -105,10 +111,12 @@ def resize(event=None, *args, **kwargs):
 
 </details>
 
+runs on window resize and update current size and orientation data
+
 
 ## *function*:  touch()
-> checking if device is touch, runs once at importing jamipy
-<details><summary><sub>expand source</sub></summary>
+
+<details><summary>touch()</summary>
 
   ```python
 def touch():
@@ -126,5 +134,7 @@ def touch():
   ```
 
 </details>
+
+checking if device is touch, runs once at importing jamipy
 
 

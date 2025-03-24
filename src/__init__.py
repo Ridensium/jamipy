@@ -1,18 +1,7 @@
 """
 **JAMIPY** - @Ridensium - 2025 - MIT License
 
-A UI widget library for building web apps with **PyScript**.
-
-#### Emphasis on:
-
-**speed**, especially in the *MicroPython* interpreter
-
-**pythonic** usage
-
-**small** package size
-
-**no thirdparty** python or javascript libraries
-
+UI widget library for building web apps with **PyScript**.
 
 """
 from .device import Device

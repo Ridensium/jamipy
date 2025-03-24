@@ -51,4 +51,4 @@ container.display()
 
 #### Documentation
 
-[Documentation index](_jamipy_.md)
+[Documentation index](/docs/docs/_jamipy_.md)

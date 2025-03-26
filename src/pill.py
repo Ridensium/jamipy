@@ -1,13 +1,13 @@
 """
-module for the Pill widget class
+Pill widget
 Label based, with more styling by default
 """
 
-from .label import Label, IconAlign, el_from_template, Element
+from .label import Label, IconAlign, make_el_template, Element
 
 class Pill(Label):
-
-    _el:Element = el_from_template(
+    """Pill widget class"""
+    _el:Element = make_el_template(
     {
         'tag_name':  'div',
         'roles':'label pill',

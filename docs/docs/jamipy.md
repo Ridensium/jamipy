@@ -9,8 +9,7 @@ Modules docs:
 
 
 - [checkers](checkers.md)
-- [component](component.md)
-- [container](container.md)
+- [constructors](constructors.md)
 - [device](device.md)
 - [drop_down](drop_down.md)
 - [image](image.md)

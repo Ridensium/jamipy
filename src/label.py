@@ -1,20 +1,20 @@
 """
-module for Label widget
+Label widget
 by default uses for the icons googles material-symbols-rounded
 with <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />    
 in the html.head
 """
 
-from .component import Component, Element, IconAlign, el_from_template
+from .constructors import Component, Element, IconAlign, make_el_template
 
 
 class Label(Component):
     """
-    basic Label widget with text and icon
+    Label widget class
     it has text and icon, and ways to change the icon position
     """
 
-    _el:Element = el_from_template(
+    _el:Element = make_el_template(
 {
     'tag_name':  'div',
     'roles':'label',

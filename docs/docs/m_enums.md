@@ -15,8 +15,7 @@ class Align:
     RIGHT = 'right'
     CENTER = 'center'
     NONE = None
-
-  ```
+```
 
 
 </details>
@@ -33,10 +32,8 @@ class Align:
 
   ```python
 class Events:
-    
     CLICK = 'click'
-
-  ```
+```
 
 
 </details>
@@ -58,8 +55,7 @@ class IconAlign:
     TOP = 'column'
     BOTTOM = 'column-reverse'
     NONE = ''
-
-  ```
+```
 
 
 </details>
@@ -76,7 +72,6 @@ class IconAlign:
 
   ```python
 class Justify:
-    
     START:str = 'flex-start'
     END:str = 'flex-end'
     CENTER:str = 'center'
@@ -85,8 +80,7 @@ class Justify:
     EVENLY:str = 'space-evenly'
     LEFT:str = 'left'
     RIGHT:str = 'right'
-
-  ```
+```
 
 
 </details>

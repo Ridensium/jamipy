@@ -1,14 +1,14 @@
 """
-module for the Spacer widget class, which
+Spacer widget
 extends the space betheen widgets in containers
 """
 
-from .component import Component, Element, el_from_template
+from .constructors import Component, Element, make_el_template
 
 
 class Spacer(Component):
-
-    _el:Element = el_from_template({'tag_name':  'div','roles':'spacer'})
+    """Spacer widget class"""
+    _el:Element = make_el_template({'tag_name':  'div','roles':'spacer'})
       
     def __init__(self):
 

@@ -1,13 +1,13 @@
 """
-module for Link (hyperlink) widget class
+Link (hyperlink) widget
 Label based, with more styling by default and url keyword as well
 """
 
-from .label import Label, IconAlign, el_from_template, Element
+from .label import Label, IconAlign, make_el_template, Element
 
 class Link(Label):
-
-    _el:Element = el_from_template({
+    """Link widget class (hyperlinks)"""
+    _el:Element = make_el_template({
 'tag_name':'a',
 'roles':'label link',
 'children':[{

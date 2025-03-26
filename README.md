@@ -14,13 +14,13 @@ UI widget library for building web apps with **PyScript**.
 
 #### Instalation
 
-the easiest way is to provide the url to the `distro.zip` in to `config.toml` in pyscript
+the easiest way is to provide the url to the last zipped version in `config.toml`
 
 ```toml
 #config.toml
 
 [files]
-"https:.../distro.zip" = "./jamipy/*"
+"https://cdn.jsdelivr.net/gh/Ridensium/jamipy@main/dist/distro.zip" = "./jamipy/*"
 
 ```
 
@@ -47,6 +47,9 @@ container += label_2
 
 container.display()
 ```
+
+
+
 
 
 #### Documentation

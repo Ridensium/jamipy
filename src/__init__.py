@@ -5,8 +5,7 @@ UI widget library for building web apps with **PyScript**.
 
 """
 from .device import Device
-from .component import Component
-from .container import Container
+from .constructors import Component, Container
 from .label import Label, IconAlign
 from .spacer import Spacer
 from .pill import Pill

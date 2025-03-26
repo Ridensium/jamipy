@@ -1,16 +1,15 @@
 """
-module for option widgets RadioButton, RadioGroup and CheckBox
+RadioButton, RadioGroup and CheckBox widgets
 """
 
 from .label import Label, IconAlign
-from .container import Container, Element, el_from_template
+from .constructors import Container, Element, make_el_template
 
 class Checker(Label):
     """
     class constructor for the RadioButton and CheckBox
     based on the Label
     """
-
 
     _icons = {True:'check_box', False:'check_box_outline_blank'}
 
@@ -25,30 +24,30 @@ class Checker(Label):
         self.checked:bool = checked
         self.enabled:bool = enabled
         self.value = value
-        self.set_event_handler('click', self.toggle_check)
+        self.add_event_handler('click', self._on_click)
 
 
-    def set_chechked(self, checked:bool=False):
-        self.checked = checked
+    def _set_checked(self, checked:bool):
+        """private method for changing visuals depending the checked state"""
         self._el.children[0].textContent = self._icons[checked]
-        if checked == True:
-            self.role.add('checked')
-        else:
-            self.role.remove('checked')
+        self.checked = checked
+        self._el.dataset.checked = checked
 
-    def toggle_check(self, event=None):
+    def _on_click(self, event=None):
+        """private handler for the click event
+        is `_on_click to show is private and not to mess if one later
+        set aditional handler for click with method `on_click`"""
         if self.enabled == True:
-            self.set_chechked(not self.checked)
-            self.change()
-
-    def change(self):
-        pass
+            self._set_checked(not self.checked)
 
 
 class RadioButton(Checker):
-    """publick class for the RadioButton widget"""
+    """RadioButton widget class
+    can be used separate from the RadioGroup too"""
 
-    _el:Element = el_from_template({
+    _group:'RadioGroup' = None
+
+    _el:Element = make_el_template({
     'tag_name':  'div',
     'roles':'label radio enabled',
     'children': [
@@ -68,17 +67,21 @@ class RadioButton(Checker):
     _icons = {True:'radio_button_checked', False:'radio_button_unchecked'}
     _parent:'RadioGroup' = None
     
-    def change(self):
-        #try is faster than if
-        try:
-            self._parent.child_changed(self)
-        except:
-            pass
+    def _on_click(self, event=None):
+        """private method - handler for the click events
+        apart from the what is in super()
+        will send message to the RadioGroup if there is one
+        """
+        super()._on_click(event)
+        group:RadioGroup = self._group
+        if group:
+            group._child_changed(child=self)
+        
 
 class CheckBox(Checker):
-    """publick class for the RadioButton widget"""
+    """RadioButton widget class"""
 
-    _el:Element = el_from_template({
+    _el:Element = make_el_template({
     'tag_name':  'div',
     'roles':'label checkbox enabled',
     'children': [
@@ -98,33 +101,35 @@ class CheckBox(Checker):
 
 class RadioGroup(Container):
     """
-    publick class for the RadioGroup widget
-    creates child widgets RadioButtons by provided list or dictionary from which
-    gets key:value couple
+    RadioGroup widget class
+    creates children RadioButtons by provided list or dictionary
+    from which gets key:value couple 
+    if list both key and value will be equal to the item from it
     """
     def __init__(self, items:dict|list):
         super().__init__()
         self.role.add('radio-group')
-        self._children:list[RadioButton] = []
+
         items = {item:item for item in items} if isinstance(items, list) else items
         for k,v in items.items():
             radio = RadioButton(text=k, value=v)
-            self.add_child(radio)
-            self._children.append(radio)
-            radio._parent = self
+            self.append(radio)
+            radio._group = self
 
         self.checked:bool = False
         self.value = None
 
-    def child_changed(self, child:RadioButton):
-        [c.set_chechked(False) for c in self._children if c != child]
+
+    def _child_changed(self, child:RadioButton):
+        """private method for parsing clicks on RadioButtons"""
+        children:set[RadioButton] = self._children
+
+        [c._set_checked(False) for c in children if c != child]
         checked = child.checked
         self.checked = checked
         self.value = child.value if checked == True else None
 
-        if checked == True:
-            self.role.add('checked')
-        else:
-            self.role.remove('checked')
+        self._el.dataset.checked = checked
+
 
 

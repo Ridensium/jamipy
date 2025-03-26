@@ -1,13 +1,12 @@
 """
-module with classes for the DropDown widget
+DropDown widget
 """
-from .component import Component, Element, Events, el_from_template
-from .container import Container
+from .constructors import Component, Container, Element, Events, make_el_template
 
 
 class DropDownOption(Component):
-    """class for the drop down option widget"""
-    _el:Element = el_from_template({'tag_name':  'option','roles':'dropdown-option'})
+    """drop down option widget used by the DropDown widget class"""
+    _el:Element = make_el_template({'tag_name':  'option','roles':'dropdown-option'})
 
     def __init__(self, value=None, key=''):
 
@@ -19,8 +18,8 @@ class DropDownOption(Component):
         self.key = key
 
 class DropDown(Container):
-    """class for the drop down widget"""
-    _el:Element = el_from_template({'tag_name':  'select','roles':'dropdown'})
+    """DropDown widget class"""
+    _el:Element = make_el_template({'tag_name':  'select','roles':'dropdown'})
 
     _items:dict = {}
     value = None
@@ -29,7 +28,7 @@ class DropDown(Container):
         
         el:Element = self._el.cloneNode()
         self._el = el
-        
+        self._children = set()
         items = {item:item for item in items} if isinstance(items, list) else items
 
         _items:dict[str|DropDownOption] = {}
@@ -38,18 +37,18 @@ class DropDown(Container):
 
             option = DropDownOption(key=k, value=v)
 
-            self.add_child(option)
+            self.append(option)
 
             _items.update({str(v):k})
            
         self._items = _items
 
-        self.set_event_handler('change', self.change)
+        self.add_event_handler('change', self._on_change)
   
-    def change(self, event):
+    def _on_change(self, event):
+        """private event handler for change event"""
         value = self._el.value
         key = self._items.get(value, None)
         self.value = value
         self.key = key
         # The value -1 indicates no element is selected.
-

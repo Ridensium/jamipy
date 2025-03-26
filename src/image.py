@@ -1,13 +1,13 @@
 """
-module for the Image widget class
+Image widget
 """
 
-from .component import Component, Element, el_from_template
+from .constructors import Component, Element, make_el_template
 
 
 class Image(Component):
-
-    _el:Element = el_from_template({'tag_name':  'img','roles':'image'})
+    """Image widget class"""
+    _el:Element = make_el_template({'tag_name':  'img','roles':'image'})
 
     def __init__(self, url='', height=None, width=None, display_mode=None, border_radius=None):
 
@@ -17,7 +17,7 @@ class Image(Component):
 
         self._el:Element = el
 
-        self.style(width=width, height=height, displayMode=display_mode, borderRadius = border_radius)
+        self.set_style(width=width, height=height, displayMode=display_mode, borderRadius = border_radius)
         
 
 

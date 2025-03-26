@@ -11,7 +11,6 @@ all that data is avaivable in the class `Device` as well as css classes aded to 
 
   ```python
 class Device:
-    
     TOUCH:bool
     D_WIDTH:int
     D_HEIGTH:int
@@ -21,8 +20,7 @@ class Device:
     PORTRAIT:bool
     ONLINE:bool
     PIXELS:int
-
-  ```
+```
 
 
 </details>
@@ -48,27 +46,22 @@ PIXELS - pixel ratio of the screen
 
   ```python
 def device_size():
-    
     screen = window.screen
     width = int(screen.width) 
     height = int(screen.height)
     pixels = int(window.devicePixelRatio)
-
     if width >= height:
         document.body.classList.add('wide')
     else:
         document.body.classList.add('tall')
-
     if height >= 1.9 * width:
         document.body.classList.add('tall-2')
     elif height >= width:
         document.body.classList.add('tall-1')
-
     Device.D_HEIGTH = height
     Device.D_WIDTH = width
     Device.PIXELS = pixels
-
-  ```
+```
 
 
 </details>
@@ -89,12 +82,10 @@ tall, tall-2 - usefull for distinguish smartphones
 
   ```python
 def network(event=None, *args, **kwargs):
-    
     online = navigator.onLine
     Device.ONLINE = online
     document.body.dataset.connection = 'online' if online == True else 'offline'
-
-  ```
+```
 
 
 </details>
@@ -111,7 +102,6 @@ runs on network status cnanges and update current status
 
   ```python
 def resize(event=None, *args, **kwargs):
-    
     width = int(window.innerWidth)
     height = int(window.innerHeight)
     Device.WIDTH = width
@@ -120,8 +110,7 @@ def resize(event=None, *args, **kwargs):
     Device.PORTRAIT = portrait
     Device.LANDSCAPE = not portrait
     document.body.dataset.orientation = 'portrait' if portrait == True else 'landscape'
-
-  ```
+```
 
 
 </details>
@@ -138,18 +127,15 @@ runs on window resize and update current size and orientation data
 
   ```python
 def touch():
-    
     if window.matchMedia('(pointer: coarse)').matches:
             is_touch = True
     elif window.matchMedia('(hover: none)').matches:
             is_touch = True
     else:
             is_touch = False
-
     document.body.classList.add('touch' if is_touch == True else 'no-touch')
     Device.TOUCH = is_touch
-
-  ```
+```
 
 
 </details>

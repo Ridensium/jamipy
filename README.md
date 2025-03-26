@@ -54,7 +54,7 @@ container.display()
 
 #### Documentation
 
-[Documentation index](/docs/docs/_jamipy_.md)
+[Documentation index](/docs/docs/jamipy.md)
 
 
 #### Roadmap

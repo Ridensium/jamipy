@@ -35,7 +35,7 @@ class Checker(Label):
 
     def _on_click(self, event=None):
         """private handler for the click event
-        is `_on_click to show is private and not to mess if one later
+        is `_on_click` to show is private and not to mess if one later
         set aditional handler for click with method `on_click`"""
         if self.enabled == True:
             self._set_checked(not self.checked)

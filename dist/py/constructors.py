@@ -10,14 +10,14 @@ else:from pyscript.ffi import create_proxy
 make_el=document.createElement
 def add_event_handler_mpy(component,event_name,handler):component._el.addEventListener(event_name,handler)
 def add_event_handler_py(component,event_name,handler):component._el.addEventListener(event_name,create_proxy(handler))
-if INTERPRETOR=='mpy':add_event_handler=add_event_handler_mpy
-else:add_event_handler=add_event_handler_py
+if INTERPRETOR=='mpy':_add_event_handler=add_event_handler_mpy
+else:_add_event_handler=add_event_handler_py
 def make_el_template(template):
 	el=make_el(template[_C]);el.className=template['roles'];children=template.get('children',[])
 	for child in children:el_child=make_el_template(child);el.append(el_child)
 	return el
 class Component:
-	_el=_A;_add_event_handler=add_event_handler;_parent=_A
+	_el=_A;_parent=_A
 	def __init__(self,tag_name='div',roles=_A):
 		self._el=make_el(tag_name)
 		if roles:self.roles=roles
@@ -29,7 +29,7 @@ class Component:
 		elif self._parent:self._parent.remove(self)
 	def add_event_handler(self,event_name,handler=_A):
 		handler=handler if handler else getattr(self,f"on_{event_name}",_A)
-		if handler:self._add_event_handler(event_name,handler)
+		if handler:_add_event_handler(self,event_name,handler)
 		return self
 	def remove_event_handler(self,event_name=_A,handler=_A,remove_all=False):
 		el=self._el

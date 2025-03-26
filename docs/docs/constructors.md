@@ -18,7 +18,6 @@ for acting as parenting widget
   ```python
 class Component:
     _el:Element = None
-    _add_event_handler = add_event_handler
     _parent:'Container' = None
     def __init__(self, tag_name='div', roles:str|list|set = None):
         self._el:Element = make_el(tag_name)
@@ -36,7 +35,7 @@ class Component:
     def add_event_handler(self, event_name:str, handler=None)->None:
         handler = handler if handler else getattr(self, f'on_{event_name}', None)
         if handler:
-            self._add_event_handler(event_name, handler)
+            _add_event_handler(self, event_name, handler)
         return self
     def remove_event_handler(self, event_name:str=None,
                              handler=None, remove_all=False):
@@ -162,7 +161,7 @@ of that widget wich are representing css classes as well
     def add_event_handler(self, event_name:str, handler=None)->None:
         handler = handler if handler else getattr(self, f'on_{event_name}', None)
         if handler:
-            self._add_event_handler(event_name, handler)
+            _add_event_handler(self, event_name, handler)
         return self
 ```
 
@@ -324,7 +323,7 @@ the key arguments work as in `add_style() `
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4386701728'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4356702624'>]</summary>
 
 
   ```python
@@ -339,23 +338,6 @@ the key arguments work as in `add_style() `
 
 appends the widget to html element in `parent_el`,
 which default value is the webpage body
-
-
-### *method*:  \_add\_event\_handler()
-
-<details><summary>[component: 'Component', event_name: str, handler]</summary>
-
-
-  ```python
-def add_event_handler_py(component:'Component', event_name:str, handler):
-    component._el.addEventListener(event_name, create_proxy(handler))
-```
-
-
-</details>
-
-
-
 
 
 
@@ -650,23 +632,6 @@ augmented remove of children widgets
 `parent -= child`
 
 
-### *method*:  \_add\_event\_handler()
-
-<details><summary>[component: 'Component', event_name: str, handler]</summary>
-
-
-  ```python
-def add_event_handler_py(component:'Component', event_name:str, handler):
-    component._el.addEventListener(event_name, create_proxy(handler))
-```
-
-
-</details>
-
-
-
-
-
 ### *method*:  add\_event\_handler()
 
 <details><summary>[self, event_name: str, handler=None] ->  None</summary>
@@ -676,7 +641,7 @@ def add_event_handler_py(component:'Component', event_name:str, handler):
     def add_event_handler(self, event_name:str, handler=None)->None:
         handler = handler if handler else getattr(self, f'on_{event_name}', None)
         if handler:
-            self._add_event_handler(event_name, handler)
+            _add_event_handler(self, event_name, handler)
         return self
 ```
 
@@ -762,7 +727,7 @@ will be parsed as pixels
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4386701728'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4356702624'>]</summary>
 
 
   ```python
@@ -857,7 +822,7 @@ the key arguments work as in `add_style() `
 
 
 
-## *function*:  add\_event\_handler()
+## *function*:  \_add\_event\_handler()
 
 <details><summary>[component: 'Component', event_name: str, handler]</summary>
 

@@ -39,9 +39,9 @@ def add_event_handler_py(component:'Component', event_name:str, handler):
 
 # event handlers by interpretor
 if INTERPRETOR == 'mpy':
-    add_event_handler = add_event_handler_mpy
+    _add_event_handler = add_event_handler_mpy
 else:
-    add_event_handler = add_event_handler_py
+    _add_event_handler = add_event_handler_py
 
 
 def make_el_template(template:dict)->'Element':
@@ -77,7 +77,6 @@ class Component:
     can be used by itself, as well for building custom widggets
     """
     _el:Element = None
-    _add_event_handler = add_event_handler
     _parent:'Container' = None
 
     def __init__(self, tag_name='div', roles:str|list|set = None):
@@ -142,8 +141,8 @@ class Component:
         handler = handler if handler else getattr(self, f'on_{event_name}', None)
 
         if handler:
-            self._add_event_handler(event_name, handler)
-
+            _add_event_handler(self, event_name, handler)
+       
         return self
 
 

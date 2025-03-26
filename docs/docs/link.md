@@ -54,23 +54,6 @@ Link widget class (hyperlinks)
 of that widget wich are representing css classes as well
 
 
-### *method*:  \_add\_event\_handler()
-
-<details><summary>[component: 'Component', event_name: str, handler]</summary>
-
-
-  ```python
-def add_event_handler_py(component:'Component', event_name:str, handler):
-    component._el.addEventListener(event_name, create_proxy(handler))
-```
-
-
-</details>
-
-
-
-
-
 ### *method*:  add\_event\_handler()
 
 <details><summary>[self, event_name: str, handler=None] ->  None</summary>
@@ -80,7 +63,7 @@ def add_event_handler_py(component:'Component', event_name:str, handler):
     def add_event_handler(self, event_name:str, handler=None)->None:
         handler = handler if handler else getattr(self, f'on_{event_name}', None)
         if handler:
-            self._add_event_handler(event_name, handler)
+            _add_event_handler(self, event_name, handler)
         return self
 ```
 
@@ -166,7 +149,7 @@ will be parsed as pixels
 
 ### *method*:  display()
 
-<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4386701728'>]</summary>
+<details><summary>[self, parent_el=<MagicMock name='mock.document.body' id='4356702624'>]</summary>
 
 
   ```python

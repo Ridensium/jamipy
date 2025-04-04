@@ -1,20 +1,31 @@
+from pyscript import config, display
+
+from .device import Device
+from .constructors import Component, Container
+
+from .label import Label, IconAlign
+from .spacer import Spacer
+from .pill import Pill
+from .link import Link
+from .image import Image
+from .drop_down import DropDown
+from .checkers import RadioButton, RadioGroup, CheckBox
+from .container_html import ContainerHtml
+from .styles import Role
+
+
+
 def test_widgets():
-    from pyscript import config
 
-    from .device import Device
-    from .constructors import Component, Container
 
-    from .label import Label, IconAlign
-    from .spacer import Spacer
-    from .pill import Pill
-    from .link import Link
-    from .image import Image
-    from .drop_down import DropDown
-    from .checkers import RadioButton, RadioGroup, CheckBox
+
 
     interpretor = config['type']
 
+    lr = Role('label', color='red', outline='2px solid gray')
 
+    print(lr)
+  
     #test Container
     container = Container().display()
  
@@ -26,9 +37,7 @@ def test_widgets():
     container += Label(interpretor).add_style(background='lightgreen', font_size=34)
 
     #test Device
-    device:Device = Device()
-    device_attr = [a for a in dir(device) if not a.startswith('_')]
-    display({k:getattr(device, k, None) for k in device_attr })
+    display(Device.USER_AGENT)
 
     #test Component
     component = Component()
@@ -54,6 +63,7 @@ def test_widgets():
     #test Pill
     pill = Pill('Vitamines')
     pill.parent = container
+    pill.role.add('test')
 
     #test Link
     container += Link('my web page')
@@ -94,3 +104,15 @@ def test_widgets():
     #test Radio Group
     radio = RadioGroup(dd_data)
     container.insert(2, radio)
+
+ 
+ 
+    
+    html = """<dir>COOL!!!</dir><widget component="Label" init="'HTML L TEXT'"></widget>"""
+    ch = ContainerHtml(html)
+    container += ch
+    #print(interpretor, ch)
+    #ch.display()
+    #print(ch.allowed)
+
+    #print(interpretor, locals().keys())

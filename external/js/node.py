@@ -232,3 +232,11 @@ class Element(Node):
 
     def getShadowRoot() -> "ShadowRoot":
         pass  # Returns the shadow root associated with the element.
+
+
+class CSSStyleSheet:
+    def deleteRule(index:int)->None:pass
+    def insertRule(rule:str, index:int=None)->int:pass
+    async def replace(text:str):pass
+    def replaceSync(text)->None:pass
+    cssRules:list

@@ -340,12 +340,16 @@ class Container(Component):
 
     _children:set[Component]
 
-    def __init__(self, children:list[Component]=None):
+    def __init__(self, children:list[Component]=None, roles:str=''):
         """
         will add children widgets provided by the `children:list`
         """
 
         self._el = self._el.cloneNode()
+
+        if roles:
+            self._el.className = roles
+            
         self._children = set()
 
         if children:

@@ -405,14 +405,14 @@ class Container(Component):
     def clear(self):
         """clear all children widgets"""
 
-        # update dom
+        # clear dom
         self._el.replaceChildren()
         
-        # update children
+        # clear children
         for child in self._children:
             child._parent = None
 
-        # update parent set
+        # clear parent set
         self._children.clear()
 
 

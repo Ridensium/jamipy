@@ -26,17 +26,19 @@ ZIP_FORMAT = 'zip'
 
 def minify(source_code:str) -> str:
     """cleans from documentation strings and minifies with light options"""
-    pattern = r'("|\'){3}(?:.|\n)*?("|\'){3}'
-    cleaned_code_doc = re.sub(pattern, "", source_code, flags=re.DOTALL)
-    cleaned_code_doc = re.sub(r'#.*$', '', cleaned_code_doc, flags=re.MULTILINE)
+    #pattern = r'("|\'){3}(?:.|\n)*?("|\'){3}'
+    #cleaned_code_doc = re.sub(pattern, "", source_code, flags=re.DOTALL)
+    cleaned_code_doc = re.sub(r'#.*$', '', source_code, flags=re.MULTILINE)
     
     #cleans docstrings for documentation
     minified_code = python_minifier.minify(
-                    cleaned_code_doc,
-                    remove_annotations=True,
-                    combine_imports=True,
-                    constant_folding=True
-                )
+        cleaned_code_doc,
+        remove_annotations=True,
+        combine_imports=True,
+        constant_folding=True,
+        remove_literal_statements=True  # This removes docstrings
+    )
+
     
     return minified_code
 

@@ -67,8 +67,10 @@ class Component:
 	def display(self,parent_el=document.body):parent_el.append(self._el);return self
 class Container(Component):
 	_el=make_el_template({_C:'div','roles':'container'});_children:0
-	def __init__(self,children=_A):
-		self._el=self._el.cloneNode();self._children=set()
+	def __init__(self,children=_A,roles=''):
+		self._el=self._el.cloneNode()
+		if roles:self._el.className=roles
+		self._children=set()
 		if children:
 			for child in children:self.append(child)
 	@property
@@ -83,7 +85,7 @@ class Container(Component):
 			child._parent=self
 		self._children=current_children
 	def clear(self):
-		self._el.innerHTML=''
+		self._el.replaceChildren()
 		for child in self._children:child._parent=_A
 		self._children.clear()
 	def count(self):return len(self._children)

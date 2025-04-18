@@ -2,7 +2,7 @@ _B='roles'
 _A='tag_name'
 from.constructors import Component,Element,IconAlign,make_el_template
 class Label(Component):
-	_el=make_el_template({_A:'div',_B:'label','children':[{_A:'i',_B:'icon label-icon'},{_A:'span',_B:'text label-text'}]})
+	_el=make_el_template({_A:'span',_B:'label','children':[{_A:'i',_B:'icon label-icon'},{_A:'span',_B:'text label-text'}]})
 	def __init__(A,text='',icon=None,icon_align=IconAlign.NONE,roles=None):
 		C=roles;B=icon_align;D=A._el.cloneNode(True);A._el=D;E=D.children;E[1].textContent=text
 		if icon:E[0].textContent=icon

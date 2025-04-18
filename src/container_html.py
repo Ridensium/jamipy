@@ -34,7 +34,7 @@ class Wiki(Label):
         if self.on_click:
             self.add_event_handler('click', self.on_click)
         self.wiki = wiki
-
+        self.role.add('label-wiki')
     def on_click(self, event=None):
         pass
 
@@ -62,14 +62,15 @@ class Wiki(Label):
 
 
 class Hashtag(Label):
-
+    hashtag_icon = 'tag'
     on_click = None
 
-    def __init__(self, text = '', icon = None):
+    def __init__(self, text = '', icon = hashtag_icon):
         super().__init__(text, icon)
         if self.on_click:
             self.add_event_handler('click', self.on_click)
         self.tag = text
+        self.role.add('label-hashtag')
    
 
 

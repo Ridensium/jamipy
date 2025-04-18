@@ -23,11 +23,12 @@ class Style:
      
         self._el:Element = el
    
-        if parent:
+        if parent == True:
+            self.append_to_element()
+        elif parent:
             self.append_to_element(parent)
     
-    def append_to_element(self, parent:Element=None):
-        parent = parent if parent else document.head
+    def append_to_element(self, parent:Element=document.head):
         id = self.id
         if id:
             el:Element = document.getElementById(id)

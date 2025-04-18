@@ -406,7 +406,7 @@ class Container(Component):
         """clear all children widgets"""
 
         # update dom
-        self._el.innerHTML = ''
+        self._el.replaceChildren()
         
         # update children
         for child in self._children:

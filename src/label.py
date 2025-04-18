@@ -16,7 +16,7 @@ class Label(Component):
 
     _el:Element = make_el_template(
 {
-    'tag_name':  'div',
+    'tag_name':  'span',
     'roles':'label',
     'children': [
                     {

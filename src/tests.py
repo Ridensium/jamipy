@@ -22,9 +22,9 @@ def test_widgets():
 
     interpretor = config['type']
 
-    lr = Role('label', color='red', outline='2px solid gray')
+    #lr = Role('label', color='red', outline='2px solid gray')
 
-    print(lr)
+
   
     #test Container
     container = Container().display()
@@ -34,14 +34,14 @@ def test_widgets():
     def display(*args, container=container):
         container += Label(f'{interpretor}: {args}')
 
-    container += Label(interpretor).add_style(background='lightgreen', font_size=34)
+    container += Label(interpretor)
 
     #test Device
     display(Device.USER_AGENT)
 
     #test Component
     component = Component()
-    component.add_style(width=100, height=100, background='pink')
+   
     component._el.textContent = 'Component in:' + interpretor
     container += component
 
@@ -72,13 +72,13 @@ def test_widgets():
     container += Image('/test.png', 50, 50)
 
     #test DropDown
-    dd_data = {'A':100, 'B':50, 'C':0}
+    dd_data = {'Ak':100, 'Bk':50, 'Ck':0}
     dd_data2 = {100:'a', 50:'b', 0:'c'}
     drop_down = DropDown(dd_data)
     drop_down2 = DropDown(dd_data2)
 
-    def print_value(dd:DropDown):
-        display('dd value', dd.value, 'dd key', dd.key)
+    def print_value(self:DropDown):
+        display('value', self.value, 'key', self.key)
 
     drop_down.on_change = print_value
     drop_down2.on_change = print_value
